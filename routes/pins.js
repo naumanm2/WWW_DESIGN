@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const pinRouter = require('./controllers/galleries')
+const pinRouter = require('../controllers/galleries')
 
 router
       .route('/')

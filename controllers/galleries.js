@@ -6,7 +6,7 @@ module.exports = {
     return response.json(pins)
   },
   findById: async (request, response) => {
-    const pin = await Pin.findById({request.params.id})
+    const pin = await Pin.findById(request.params.id)
     return response.json(pin)
   },
   update: async (request, response) => {
@@ -25,5 +25,3 @@ module.exports = {
 
 
 }
-
-module.exports = pinRouter
