@@ -10,16 +10,16 @@ const schema = new mongoose.Schema({
     required: true
   },
   exhibitionStart: {
-    type: Date
+    type: String
   },
   exhibitionEnd: {
-    type: Date
+    type: String
   },
   openingHour: {
-    type: Date
+    type: String
   },
   closingHour: {
-    type: Date
+    type: String
   },
   address: {
     type: String

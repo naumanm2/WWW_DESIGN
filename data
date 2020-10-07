@@ -1,0 +1,19 @@
+ateneum = {
+  type: "exhibition",
+  name: "ateneum",
+  exhibitionStart: '25-12-2012',
+  exhibitionEnd: '28-12-2012',
+  openingHour: '2012-25-12',
+  closingHour: '2012-28-12',
+  address: "kaivokatu 7",
+  keywords: [
+    "art", "kunst"
+  ],
+  fees: [
+    8, 10, 12
+  ],
+  picture: "lol",
+  link: "www.ateneum.fi",
+  description: "the best museum in helsinki",
+  museocard: true
+}
