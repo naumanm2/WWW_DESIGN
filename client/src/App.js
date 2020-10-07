@@ -1,12 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
-import Map from './pages/Map'
+import Home from './pages/Home'
+
+import pinService from './services/pins'
 
 
 const App = () => {
+
+  const [pins, setPins] = useState([])
+  useEffect(() => {
+    pinService.getAll().then(result => setPins(result))
+  }, [])
   return (
     <div>
-      <Map />
+      <Home pins={pins}/>
     </div>
   )
 }

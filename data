@@ -1,4 +1,4 @@
-ateneum = {
+export const ateneum = {
   type: "exhibition",
   name: "ateneum",
   exhibitionStart: '25-12-2012',
