@@ -13,7 +13,7 @@ const App = () => {
   }, [])
   return (
     <div>
-      <Home pins={pins}/>
+      <Home pins={pins} />
     </div>
   )
 }
