@@ -21,8 +21,11 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 app.use(express.json())
 app.use(routes)
 
-Pin.deleteMany({})
-Pin.insertMany(initData.museums)
+const init = async () => {
+  await Pin.deleteMany({})
+  await Pin.insertMany(initData.museums)
+}
+init()
 
 
 app.use(middleware.requestLogger)
