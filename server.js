@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const Pin = require('./models/pin')
+const initData = require('./data')
 
 const routes = require('./routes')
 const middleware = require('./utils/middleware')
@@ -18,6 +20,9 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 
 app.use(express.json())
 app.use(routes)
+
+Pin.deleteMany({})
+Pin.insertMany(initData.museums)
 
 
 app.use(middleware.requestLogger)
