@@ -24,7 +24,7 @@ const schema = new mongoose.Schema({
   address: {
     type: String
   },
-  lan: { type: mongoose.Decimal128 },
+  lat: { type: mongoose.Decimal128 },
   lng: { type: mongoose.Decimal128 },
   keywords: [
     { type: String }

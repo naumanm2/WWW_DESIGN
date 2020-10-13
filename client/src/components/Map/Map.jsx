@@ -9,20 +9,20 @@ const Map = (props) => {
 
   const [info, setInfo] = useState(null)
 
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState('')
   const visible = { display: show ? '' : 'none' }
 
   const onChildMouseEnter = (key, childProps) => {
     console.log("entering")
     setInfo(childProps)
-    setShow(true)
+    setShow(key)
    }
 
    const onChildMouseLeave = (key, childProps) => {
      console.log("leaving")
      console.log(childProps)
      setInfo(null)
-     setShow(false)
+     setShow('')
    }
 
    const markers = props.pins.map(pin =>
@@ -31,7 +31,7 @@ const Map = (props) => {
        lat={pin.lat.$numberDecimal}
        lng={pin.lng.$numberDecimal}
        input={pin}
-       show={show}>
+       show={show==pin._id}>
      </Pin>
    )
 
