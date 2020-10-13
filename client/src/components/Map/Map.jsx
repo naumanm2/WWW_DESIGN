@@ -25,6 +25,16 @@ const Map = (props) => {
      setShow(false)
    }
 
+   const markers = props.pins.map(pin =>
+     <Pin
+       key={pin._id}
+       lat={pin.lat.$numberDecimal}
+       lng={pin.lng.$numberDecimal}
+       input={pin}
+       show={show}>
+     </Pin>
+   )
+
 
   return (
     <div style={{ height: '100vh', width: '100%' }}>
@@ -35,21 +45,7 @@ const Map = (props) => {
       onChildMouseEnter={onChildMouseEnter}
       onChildMouseLeave={onChildMouseLeave}
       >
-
-      {props.pins.map(pin =>
-        <Pin
-          key={pin._id}
-          lat={pin.lat.$numberDecimal}
-          lng={pin.lng.$numberDecimal}
-          input={pin}>
-        </Pin>
-      )}
-
-      <Info
-        data={info}
-        
-        >
-      </Info>
+      {markers}
 
 
     </GoogleMap>

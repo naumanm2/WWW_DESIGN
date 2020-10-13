@@ -1,4 +1,5 @@
-export const ateneum = {
+
+const museums = [{
   type: "exhibition",
   name: "ateneum",
   exhibitionStart: '25-12-2012',
@@ -18,6 +19,30 @@ export const ateneum = {
   link: "www.ateneum.fi",
   description: "the best museum in helsinki",
   museocard: true
+}, {
+  type: "exhibition",
+  name: "Kiasma",
+  exhibitionStart: '02-06-2020',
+  exhibitionEnd: '10-01-2021',
+  openingHour: '2012-25-12',
+  closingHour: '2012-28-12',
+  address: "Mannerheiminaukio 2, 00100 Helsinki",
+  keywords: [
+    "Seppo Fränti", "nykytade", "maalaustaide"
+  ],
+  fees: [
+    0, 13, 15
+  ],
+  lat: 60.171985,
+  lng: 24.936742,
+  picture: "https://kiasma.fi/wp-content/uploads/2020/01/SeppoFranti-verkko.jpg",
+  link: "https://kiasma.fi/nayttelyt/hullu-rakkaus-seppo-frantin-kokoelma/",
+  description: "Seppo Fräntin mittava taidekokoelma on rohkea, avoin ja samalla intiimi. Se hahmottaa ihmisenä olemisen kipuilua kuvataiteen kautta.",
+  museocard: true
+}]
+
+module.exports = {
+  museums
 }
 
 
