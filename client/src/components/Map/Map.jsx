@@ -1,38 +1,58 @@
-import React from 'react'
-import GoogleMapReact from 'google-map-react'
+import React, {useState} from 'react'
+import GoogleMap from 'google-map-react'
 import Info from '../Info/Info'
+import Pin from '../Pin/Pin'
 
 
 
 const Map = (props) => {
 
-  const Marker = props => {
-  return <div className="SuperAwesomePin">
-    see me
-  </div>
-  }
+  const [info, setInfo] = useState(null)
 
-console.log(props.pins)
+  const [show, setShow] = useState(false)
+  const visible = { display: show ? '' : 'none' }
+
+  const onChildMouseEnter = (key, childProps) => {
+    console.log("entering")
+    setInfo(childProps)
+    setShow(true)
+   }
+
+   const onChildMouseLeave = (key, childProps) => {
+     console.log("leaving")
+     console.log(childProps)
+     setInfo(null)
+     setShow(false)
+   }
+
+
   return (
     <div style={{ height: '100vh', width: '100%' }}>
-    <GoogleMapReact
+    <GoogleMap
       bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY}}
       defaultCenter={props.center}
-      defaultZoom={props.zoom}>
+      defaultZoom={props.zoom}
+      onChildMouseEnter={onChildMouseEnter}
+      onChildMouseLeave={onChildMouseLeave}
+      >
 
       {props.pins.map(pin =>
-        <Info
-          key={pin.id}
-          position={{
-            lat: pin.lat,
-            lng: pin.lng
-          }}
+        <Pin
+          key={pin._id}
+          lat={pin.lat.$numberDecimal}
+          lng={pin.lng.$numberDecimal}
           input={pin}>
-        </Info>
+        </Pin>
       )}
 
+      <Info
+        data={info}
+        
+        >
+      </Info>
 
-    </GoogleMapReact>
+
+    </GoogleMap>
   </div>
   )
 }

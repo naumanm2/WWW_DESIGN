@@ -12,6 +12,8 @@ export const ateneum = {
   fees: [
     8, 10, 12
   ],
+  lat: 60.168665992,
+  lng: 24.939829574,
   picture: "lol",
   link: "www.ateneum.fi",
   description: "the best museum in helsinki",

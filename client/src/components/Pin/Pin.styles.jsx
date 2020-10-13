@@ -2,10 +2,9 @@ import styled from 'styled-components'
 
 export const K_SIZE = 40;
 
-export const InfoStyle = styled.div`
+export const PinStyle = styled.div`
   // initially any map object has left top corner at lat lng coordinates
   // it's on you to set object origin to 0,0 coordinates
-  left: 
   position: 'absolute';
   width: K_SIZE;
   height: K_SIZE;
@@ -24,7 +23,7 @@ export const InfoStyle = styled.div`
 };
 `
 
-export const InfoStyleHover = styled.div`
+export const PinStyleHover = styled.div`
   position: 'absolute';
   width: K_SIZE;
   height: K_SIZE;
