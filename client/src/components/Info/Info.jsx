@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 
 const Info = (props) => {
   return (
-    <div />
+    <div>
+      lol
+    </div>
   )
 }
 

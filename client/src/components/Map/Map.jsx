@@ -1,14 +1,18 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react'
+import Info from '../Info/Info'
 
 
 
 const Map = (props) => {
 
   const Marker = props => {
-  return <div className="SuperAwesomePin"></div>
+  return <div className="SuperAwesomePin">
+    see me
+  </div>
   }
 
+console.log(props.pins)
   return (
     <div style={{ height: '100vh', width: '100%' }}>
     <GoogleMapReact
@@ -16,7 +20,18 @@ const Map = (props) => {
       defaultCenter={props.center}
       defaultZoom={props.zoom}>
 
-      <Marker lat={props.lat} lng={props.lng} />
+      {props.pins.map(pin =>
+        <Info
+          key={pin.id}
+          position={{
+            lat: pin.lat,
+            lng: pin.lng
+          }}
+          input={pin}>
+        </Info>
+      )}
+
+
     </GoogleMapReact>
   </div>
   )
