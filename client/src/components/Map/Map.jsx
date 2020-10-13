@@ -41,16 +41,10 @@ const Map = (props) => {
           key={pin._id}
           lat={pin.lat.$numberDecimal}
           lng={pin.lng.$numberDecimal}
-          input={pin}>
+          input={pin}
+          show={show}>
         </Pin>
       )}
-
-      <Info
-        data={info}
-        
-        >
-      </Info>
-
 
     </GoogleMap>
   </div>
