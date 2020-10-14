@@ -1,21 +1,49 @@
 import React, {useState, useEffect} from 'react';
 
 import Home from './pages/Home'
+import Navbar from './components/navigation/Navbar'
 
-import pinService from './services/pins'
+import { connect } from 'react-redux'
+
+import {Switch, Route} from 'react-router-dom'
+
+import { toggleMenu } from './reducers/menuReducer'
+import { initData } from './reducers/pinReducer'
 
 
-const App = () => {
+const App = (props) => {
 
-  const [pins, setPins] = useState([])
   useEffect(() => {
-    pinService.getAll().then(result => setPins(result))
+    props.initData()
   }, [])
+
   return (
     <div>
-      <Home pins={pins} />
+      <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+      </Switch>
+
     </div>
   )
 }
 
-export default App;
+
+
+const mapStateToProps = (state) => {
+  return {
+    isOpen: state.menu,
+    pins: state.pins
+  }
+}
+
+
+const mapDispatchToProps = {
+  toggleMenu,
+  initData
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(App)

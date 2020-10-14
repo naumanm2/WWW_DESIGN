@@ -11,7 +11,6 @@ const Home = (props) => {
       <Map
         center={helsinki}
         zoom={11}
-        pins={props.pins}
       />
     </div>
   )

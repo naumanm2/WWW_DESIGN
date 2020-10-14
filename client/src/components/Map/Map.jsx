@@ -3,6 +3,8 @@ import GoogleMap from 'google-map-react'
 import Info from '../Info/Info'
 import Pin from '../Pin/Pin'
 
+import { connect } from 'react-redux'
+
 
 
 const Map = (props) => {
@@ -53,4 +55,13 @@ const Map = (props) => {
   )
 }
 
-export default Map
+const mapStateToProps = (state) => {
+  return {
+    pins: state.pins
+  }
+
+}
+
+export default connect(
+  mapStateToProps
+)(Map)
