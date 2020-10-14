@@ -4,25 +4,24 @@ import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
   width: 100%;
-  height: 70px;
   display: flex;
   justify-content: space-between;
+
 
 `;
 
 export const TopMenu = styled.ul`
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-flow: row nowrap;
     font-size: 31px;
     font-weight: bolder;
     background-color: #363636;
-    position: static;
     left: 0;
-    height: 30px;
-    padding-bottom: 30px;
-    width: 100%;
+    width: 70%;
+    margin-top: 20px;
+    height: 80px;
     transition: all 0.2s linear;
 
     @media screen and (max-width: 991px) {
@@ -56,26 +55,8 @@ export const TopMenuLink = styled(Link)`
 
 export const NavContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
-  background-color: #363636;
+  justify-content: center;
   transition: all 0.2s linear;
 
-
   ${Container}
-`;
-
-export const NavBody = styled.ul`
-list-style: none;
-display: flex-row;
-justify-content: center;
-flex-flow: row nowrap;
-font-size: 31px;
-font-weight: bolder;
-background-color: #fff;
-position: static;
-top: 0;
-height: 40px;
-width: 100%;
-transition: transform 0.4s ease-in-out;
-
 `;

@@ -3,6 +3,8 @@ import GoogleMap from 'google-map-react'
 import Info from '../Info/Info'
 import Pin from '../Pin/Pin'
 
+import {MapContainer} from './Map.styles'
+
 import { connect } from 'react-redux'
 
 
@@ -39,19 +41,20 @@ const Map = (props) => {
 
 
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-    <GoogleMap
-      bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY}}
-      defaultCenter={props.center}
-      defaultZoom={props.zoom}
-      onChildMouseEnter={onChildMouseEnter}
-      onChildMouseLeave={onChildMouseLeave}
-      >
-      {markers}
+    <MapContainer>
+
+      <GoogleMap
+        bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY}}
+        defaultCenter={props.center}
+        defaultZoom={props.zoom}
+        onChildMouseEnter={onChildMouseEnter}
+        onChildMouseLeave={onChildMouseLeave}
+        >
+        {markers}
 
 
-    </GoogleMap>
-  </div>
+      </GoogleMap>
+  </MapContainer>
   )
 }
 

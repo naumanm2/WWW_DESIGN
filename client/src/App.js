@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Home from './pages/Home'
 import Navbar from './components/navigation/Navbar'
 
+import GlobalStyle from './styles'
+
 import { connect } from 'react-redux'
 
 import { Switch, Route } from 'react-router-dom'
@@ -19,11 +21,11 @@ const App = (props) => {
 
   return (
     <div>
+    <GlobalStyle open={props.isOpen}/>
       <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
       </Switch>
-
     </div>
   )
 }

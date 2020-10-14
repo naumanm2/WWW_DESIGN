@@ -11,8 +11,8 @@ const Navbar = ({open, toggleMenu, location}) => {
 
   return (
     <Nav>
-      <NavContainer id="navigation" onTop={location}>
-        <TopMenu onTop={location}>
+      <NavContainer id="navigation">
+        <TopMenu>
           <TopMenuItem>
             <TopMenuLink to='/' >Home</TopMenuLink>
           </TopMenuItem>

@@ -1,4 +1,18 @@
-import styled from 'styled-components'
+import styled, {createGlobalStyle} from 'styled-components'
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue, Sans-Serif;
+  }
+  body {
+    overflow-y: ${({ open }) => (open) ? 'hidden' : ''}
+  }
+  `
 
 export const Container = styled.div`
 z-index: 1;
@@ -11,3 +25,5 @@ margin-right: auto;
   padding-right: 30px;
 }
 `;
+
+export default GlobalStyle
