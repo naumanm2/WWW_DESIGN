@@ -16,8 +16,8 @@ export const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.04rem;
-    background-color: ${({ open, onTop }) => open || onTop ? '#ccc' : '#363636'};
-    
+    background-color: #ccc;
+
     border-radius: 5px;
     transform-origin: 1px;
     transition: all 0.3s linear;

@@ -5,7 +5,7 @@ import Navbar from './components/navigation/Navbar'
 
 import { connect } from 'react-redux'
 
-import {Switch, Route} from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { toggleMenu } from './reducers/menuReducer'
 import { initData } from './reducers/pinReducer'

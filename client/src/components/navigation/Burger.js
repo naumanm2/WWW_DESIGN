@@ -9,11 +9,9 @@ const Burger = ({
   open,
   handleClick
 }) => {
-
-  const onTop = useSelector(state => state.location)
   return (
     <>
-      <StyledBurger open={open} onClick={handleClick} onTop={onTop}>
+      <StyledBurger open={open} onClick={handleClick}>
         <div />
         <div />
         <div />
