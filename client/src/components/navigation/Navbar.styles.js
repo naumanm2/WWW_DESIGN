@@ -23,6 +23,7 @@ export const TopMenu = styled.ul`
     margin-top: 20px;
     height: 80px;
     transition: all 0.2s linear;
+    z-index: 10;
 
     @media screen and (max-width: 991px) {
       display: none;

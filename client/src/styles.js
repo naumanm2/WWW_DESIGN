@@ -15,10 +15,9 @@ const GlobalStyle = createGlobalStyle`
   `
 
 export const Container = styled.div`
-z-index: 1;
-width: 100%;
-margin-left: auto;
-margin-right: auto;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
 @media screen and (max-width: 991px) {
   padding-left: 30px;

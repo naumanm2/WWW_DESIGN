@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Ul = styled.ul`
+    z-index: 1;
     list-style: none;
     display: flex;
     justify-content: center;
