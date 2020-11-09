@@ -6,4 +6,9 @@ const getAll = async () => {
   return request.data
 }
 
-export default { getAll }
+const createPin = (pin) => {
+  const request = axios.post(baseUrl, pin)
+  return request.then(response => response.data)
+}
+
+export default { getAll, createPin }

@@ -20,10 +20,7 @@ const Navbar = ({open, toggleMenu, location}) => {
             <TopMenuLink to='/experience' >experiences</TopMenuLink>
           </TopMenuItem>
           <TopMenuItem>
-            <TopMenuLink to='/interests' >interests</TopMenuLink>
-          </TopMenuItem>
-          <TopMenuItem>
-            <TopMenuLink to='/contact' >contact</TopMenuLink>
+            <TopMenuLink to='/admin' >admin?</TopMenuLink>
           </TopMenuItem>
         </TopMenu>
         <Burger open={open} handleClick={() => toggleMenu(!open)}/>

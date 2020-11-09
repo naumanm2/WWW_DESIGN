@@ -7,7 +7,9 @@ const Pin = (props) => {
   return (
     <PinContainer>
       <div style={visibility}>
-        {props.input.keywords}
+        <PinStyleHover>
+          {props.input.keywords}
+        </PinStyleHover>
       </div>
       <PinStyle>
         {props.input.name}

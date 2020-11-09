@@ -35,7 +35,7 @@ const Map = (props) => {
        lat={pin.lat.$numberDecimal}
        lng={pin.lng.$numberDecimal}
        input={pin}
-       show={show==pin._id}>
+       show={show===pin._id}>
      </Pin>
    )
 
@@ -44,7 +44,6 @@ const Map = (props) => {
     <MapContainer>
 
       <GoogleMap
-        bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY}}
         defaultCenter={props.center}
         defaultZoom={props.zoom}
         onChildMouseEnter={onChildMouseEnter}

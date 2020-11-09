@@ -19,10 +19,7 @@ const Menu = ({
         <MenuLink to='/experience' onClick={handleClick}>experience</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink to='/interests' onClick={handleClick}>interests</MenuLink>
-      </MenuItem>
-      <MenuItem>
-        <MenuLink to='/contact' onClick={handleClick}>contact</MenuLink>
+        <MenuLink to='/admin' onClick={handleClick}>admin?</MenuLink>
       </MenuItem>
     </Ul>
   )

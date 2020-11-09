@@ -1,16 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 
 import Home from './pages/Home'
+import Admin from './pages/Admin'
 import Navbar from './components/navigation/Navbar'
 
 import GlobalStyle from './styles'
 
 import { connect } from 'react-redux'
 
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 
 import { toggleMenu } from './reducers/menuReducer'
 import { initData } from './reducers/pinReducer'
+import { initUser } from './reducers/userReducer'
 
 
 const App = (props) => {
@@ -21,10 +23,13 @@ const App = (props) => {
 
   return (
     <div>
-    <GlobalStyle open={props.isOpen}/>
+    <GlobalStyle open={props.isOpen} />
       <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
+      </Switch>
+      <Switch>
+        <Route path='/admin' exact component={Admin} />
       </Switch>
     </div>
   )
@@ -35,14 +40,16 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     isOpen: state.menu,
-    pins: state.pins
+    pins: state.pins,
+    user: state.user
   }
 }
 
 
 const mapDispatchToProps = {
   toggleMenu,
-  initData
+  initData,
+  initUser
 }
 
 export default connect(

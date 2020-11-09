@@ -10,10 +10,23 @@ export const initData = () => {
   }
 }
 
+export const createPin = (pin) => {
+  return async dispatch => {
+    const result = await pinService.createPin(pin).then(pins => pins)
+    console.log(result)
+    dispatch({
+      type: 'NEW_PIN',
+      data: result
+    })
+  }
+}
+
 const pinReducer = (state = [], action) => {
   switch(action.type) {
     case 'INIT_PINS':
       return action.data
+    case 'NEW_PIN':
+      return [...state, action.data]
     default:
       return state
   }
