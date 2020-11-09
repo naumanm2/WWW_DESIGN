@@ -1,39 +1,53 @@
 import styled from 'styled-components'
 import { Container } from '../../styles'
 
+import { MapPin } from '@styled-icons/boxicons-regular/'
+
+const size = '40px';
+const hsize = '20px';
+
 export const PinContainer = styled(Container)`
   position: absolute;
-  width: 40px;
-  height: 40px;
-  left: -20px;
-  top: -20px;
-  border: 5px solid #f44336;
-  borderRadius: 40px;
-  background-color: white;
-  text-align: center;
-  color: #3f51b5;
-  fontSize: 16;
-  fontWeight: bold;
-  padding: 4;
+  width: ${size};
+  height: ${size};
+  left: -${hsize};
+  top: -${hsize};
   cursor: pointer;
-${Container}
+  padding: 0;
+  color: #fff;
+  ${Container}
 `;
 
 
 export const PinStyle = styled.div`
+  color: #363636;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  text-align: center;
+  height: 40px;
 
 `;
 
 export const PinStyleHover = styled.div`
   position: absolute;
-  width: 40px;
-  height: 40px;
-  left: -20px;
-  top: -20px;
-  borderRadius: 80px;
-  text-align: center;
-  padding: 4;
+  height: ${({onTop}) => onTop ? '40px' : '0px'};
+  top: ${({onTop}) => onTop ? '-2em' : '0px'};
+  overflow: ${({onTop}) => onTop ? '' : 'hidden'};
   cursor: pointer;
-  border: 5px solid #3f51b5;
-  color: #f44336;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s linear;
+
+`;
+
+export const PinObject = styled(MapPin)`
+  position: absolute;
+  width: ${({onTop}) => onTop ? '40px' : '30px'};
+  height: ${({onTop}) => onTop ? '40px' : '30px'};
+  color: ${({onTop}) => onTop ? '#fff' : '#363636'};
+  left: ${({onTop}) => onTop ? '-5px' : '0px'};
+  margin: 0;
+
+  transition: all 0.3s linear;
 `;

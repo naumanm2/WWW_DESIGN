@@ -1,18 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { PinContainer, PinStyle, PinStyleHover } from './Pin.styles'
+import { PinContainer, PinStyle, PinStyleHover, PinObject } from './Pin.styles'
+
 
 const Pin = (props) => {
   const visibility = { display: props.show ? '' : 'none' }
   return (
+
     <PinContainer>
-      <div style={visibility}>
-        <PinStyleHover>
-          {props.input.keywords}
-        </PinStyleHover>
-      </div>
-      <PinStyle>
-        {props.input.name}
+
+      <PinStyle >
+          <PinStyleHover onTop={props.show} >
+            {props.input.name}
+          </PinStyleHover>
+          <PinObject onTop={props.show} />
       </PinStyle>
     </PinContainer>
 
