@@ -26,6 +26,7 @@ const Pin = (props) => {
     <>
     <Info show={props.input.name}/>
     <PinContainer>
+
       <PinStyle >
           <PinStyleHover onTop={props.show} >
             {props.input.name}
