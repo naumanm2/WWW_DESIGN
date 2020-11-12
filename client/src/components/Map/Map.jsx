@@ -22,6 +22,10 @@ const Map = (props) => {
     setShow(key)
    }
 
+   const closeMenu = () => {
+     console.log('lol')
+   }
+
    const onChildMouseLeave = (key, childProps) => {
      console.log("leaving")
      console.log(childProps)
@@ -41,7 +45,7 @@ const Map = (props) => {
 
 
   return (
-    <MapContainer>
+    <MapContainer onClick={closeMenu}>
 
       <GoogleMap
         defaultCenter={props.center}

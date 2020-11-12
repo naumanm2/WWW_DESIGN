@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 import { Container } from '../../styles'
 
+import { Close } from '@styled-icons/evil/Close'
+
 export const InfoContainer = styled(Container)`
   display: flex;
   position: absolute;
   width: auto;
+  cursor: default;
   justify-content: space-between;
   background-color: #fff;
   height: 300px;
@@ -29,6 +32,7 @@ height: 50%;
 `
 export const InfoColumn = styled.div`
 margin-bottom: 15px;
+margin-top: 10px;
 flex-flow: column nowrap;
 padding-right: 15px;
 padding-left: 15px;
@@ -51,26 +55,24 @@ padding-bottom: 65px;
 `
 
 export const TopLine = styled.div`
-color: ${({ light}) => (light ? '#fff' : '#363636')};
-font-size: 12px;
-font-weight: bold;
-line-height: 16px;
-letter-spacing: 1.4px;
+  color: ${({ light}) => (light ? '#fff' : '#363636')};
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  letter-spacing: 1.4px;
 
 `
 
 export const InfoText = styled.p`
-width: 100%;
-max-width: 440px;
-font-size: 12px;
-color: ${({ light}) => (light ? '#fff' : '#363636')};
+  width: 100%;
+  max-width: 440px;
+  font-size: 12px;
+  color: ${({ light}) => (light ? '#fff' : '#363636')};
 `
 
 export const ImgWrapper = styled.div`
   width: 50%;
-  height: 50%;
   background-color: #363636;
-  max-width: 555px;
   display: flex;
   justify-content: flex-start;
 
@@ -81,6 +83,33 @@ export const Img = styled.img`
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 500px;
+  max-height: 150px;
 
+`
+
+export const CloseBtn = styled(Close)`
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: -10px;
+  cursor: pointer;
+  color: #363636;
+`
+
+export const Description = styled.p`
+
+`
+export const Name = styled.p`
+
+`
+export const Address = styled.p`
+
+`
+export const Museocard = styled.p`
+`
+export const OpeningHours = styled.p`
+`
+export const Clock = styled.p`
+`
+export const Site = styled.p`
 `

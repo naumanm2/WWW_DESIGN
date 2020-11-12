@@ -3,18 +3,41 @@ import PropTypes from 'prop-types'
 
 import {connect} from 'react-redux'
 
+import { nullInfo } from '../../reducers/infoReducer'
+
 import {
   InfoSection,
   InfoContainer,
   InfoRow,
   InfoColumn,
   ImgWrapper,
+  Img,
   InfoText,
-  TopLine
+  TopLine,
+  Description,
+  Name,
+  Address,
+  Museocard,
+  OpeningHours,
+  Clock,
+  Site,
+  CloseBtn
 } from './Info.styles'
 
 const Info = (props) => {
   console.log(props.info)
+
+  const handleClick = (event) => {
+    event.preventDefault()
+    try {
+      props.nullInfo()
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+
+
   if (!props.info || !props.show || props.show !== props.info.name) {
     return null
   }
@@ -24,21 +47,31 @@ const Info = (props) => {
       <InfoContainer>
         <InfoRow>
           <InfoColumn>
-            <ImgWrapper></ImgWrapper>
+            <ImgWrapper>
+              <Img src={`${props.info.picture}`} alt={`${props.info.name}`}></Img>
+            </ImgWrapper>
           </InfoColumn>
           <InfoColumn>
             <InfoText>
-              {props.info.description}
+              <Description>
+                {props.info.description}
+              </Description>
             </InfoText>
           </InfoColumn>
+          <CloseBtn onClick={handleClick}>
+          </CloseBtn>
         </InfoRow>
         <InfoRow>
           <InfoColumn>
             <TopLine>
-              nameofexhibition
+              <Name>
+                nameofexhibition
+              </Name>
             </TopLine>
             <InfoText>
-              {props.info.address}
+              <Address>
+                {props.info.address}
+              </Address>
             </InfoText>
             <TopLine>
               Pääsymaksut
@@ -49,27 +82,35 @@ const Info = (props) => {
               </InfoText>
             ))}
             <InfoText>
-            museokortti
+              <Museocard>
+                museokortti
+              </Museocard>
             </InfoText>
           </InfoColumn>
           <InfoColumn>
             <TopLine>
-              Aukioloajat
+              <OpeningHours>
+                Aukioloajat
+              </OpeningHours>
             </TopLine>
             <InfoText>
-              <p>ma 12-18</p>
-              <p>ti 12-18</p>
+              <Clock>ma 12-18</Clock>
+              <Clock>ti 12-18</Clock>
             </InfoText>
           </InfoColumn>
           <InfoColumn>
             <TopLine>
-              AvainSanat
+              Avainsanat
             </TopLine>
+            {props.info.keywords.map(fee => (
+              <InfoText>
+                {fee}
+              </InfoText>
+            ))}
             <InfoText>
-              {props.info.keywords}
-            </InfoText>
-            <InfoText>
-            <a href={`${props.info.link}`}>{props.info.link}</a>
+              <Site>
+                <a href={`${props.info.link}`}>{props.info.link}</a>
+              </Site>
           </InfoText>
           </InfoColumn>
         </InfoRow>
@@ -82,5 +123,11 @@ const Info = (props) => {
 const mapStateToProps = (state) => {
   return {info: state.info}
 }
+const mapDispatchToProps = {
+  nullInfo
+}
 
-export default connect(mapStateToProps)(Info)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Info)
