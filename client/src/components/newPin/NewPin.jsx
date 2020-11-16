@@ -13,6 +13,9 @@ const NewPin = (props) => {
   const [exhibitionEnd, setEnd] = useState('')
   const [openingHours, setOpeninghours] = useState('')
   const [address, setAddress] = useState('')
+  const [lon, setlon] = useState(null)
+  const [lat, setlat] = useState(null)
+
   const [keywords, setKeywords] = useState([])
   const [fee, setFee] = useState([])
   const [picture, setPicture] = useState('')
@@ -30,6 +33,8 @@ const NewPin = (props) => {
       exhibitionEnd: exhibitionEnd,
       openingHours: openingHours,
       address: address,
+      lon: lon,
+      lat: lat,
       keywords: keywords,
       fees: fee,
       picture: picture,
@@ -94,6 +99,20 @@ const NewPin = (props) => {
         <input
           value={address}
           onChange={({target}) => setAddress(target.value)}
+        />
+      </div>
+      <div>
+        longitude
+        <input
+          value={lon}
+          onChange={({target}) => setlon(target.value)}
+        />
+      </div>
+      <div>
+        latitude
+        <input
+          value={lat}
+          onChange={({target}) => setlat(target.value)}
         />
       </div>
       <div>

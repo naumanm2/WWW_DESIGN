@@ -47,7 +47,7 @@ const Pin = (props) => {
       </PinStyle>
     </PinContainer>
   </Slide>
-    <Info show={props.input.name} />
+    <GalleryInfo show={props.input.name} />
 </GalleryContainer>
 
 </>
