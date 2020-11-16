@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 
 import Home from './pages/Home'
 import Admin from './pages/Admin'
-import Navbar from './components/navigation/Navbar'
 
 import GlobalStyle from './styles'
 
@@ -10,7 +9,6 @@ import { connect } from 'react-redux'
 
 import { Switch, Route, Link } from 'react-router-dom'
 
-import { toggleMenu } from './reducers/menuReducer'
 import { initData } from './reducers/pinReducer'
 import { initUser } from './reducers/userReducer'
 
@@ -24,7 +22,6 @@ const App = (props) => {
   return (
     <div>
     <GlobalStyle open={props.isOpen} />
-      <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
       </Switch>
@@ -47,7 +44,6 @@ const mapStateToProps = (state) => {
 
 
 const mapDispatchToProps = {
-  toggleMenu,
   initData,
   initUser
 }

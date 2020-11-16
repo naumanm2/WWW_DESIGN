@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavContainer, NavBody, TopMenu, TopMenuItem, TopMenuLink } from './Navbar.styles'
+import { Nav, NavContainer, NavBody, TopMenu, TopMenuItem, TopMenuLink, TopMenuFilter } from './Navbar.styles'
 import Menu from './Menu';
 import Burger from './Burger';
 
@@ -9,6 +9,11 @@ import { toggleMenu } from '../../reducers/menuReducer'
 
 const Navbar = ({open, toggleMenu, location}) => {
 
+  const toggleFilter = (event) => {
+    event.preventDefault()
+    console.log('filter')
+  }
+
   return (
     <Nav>
       <NavContainer id="navigation">
@@ -17,12 +22,13 @@ const Navbar = ({open, toggleMenu, location}) => {
             <TopMenuLink to='/' >Home</TopMenuLink>
           </TopMenuItem>
           <TopMenuItem>
-            <TopMenuLink to='/experience' >experiences</TopMenuLink>
+            <TopMenuLink to='/admin'>admin?</TopMenuLink>
           </TopMenuItem>
           <TopMenuItem>
-            <TopMenuLink to='/admin' >admin?</TopMenuLink>
+            <TopMenuFilter onClick={toggleFilter}>admin?</TopMenuFilter>
           </TopMenuItem>
         </TopMenu>
+        <Filter open={openFilter} />
         <Burger open={open} handleClick={() => toggleMenu(!open)}/>
         <Menu open={open} handleClick={() => toggleMenu(!open)}/>
       </NavContainer>

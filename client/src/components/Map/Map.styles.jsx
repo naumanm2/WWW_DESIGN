@@ -7,6 +7,17 @@ export const MapContainer = styled.div`
   top: 0;
   width: 100%;
   height: 100vh;
-  justify-content: center;
 
+
+`;
+
+export const ClusterMarker = styled.div`
+  color: #fff;
+  background: #1978c8;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 `;

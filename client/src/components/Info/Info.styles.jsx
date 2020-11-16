@@ -12,13 +12,25 @@ export const InfoContainer = styled(Container)`
   background-color: #fff;
   height: 300px;
   flex-flow: column nowrap;
+  overflow: hidden;
   ${Container}
 `;
 
 export const InfoSection = styled.div`
   color: #fff;
+  position: relative;
+  left: -230px;
+  top: -330px;
   background-color: #fff;
   transition: all 0.2s linear;
+  z-index: 10;
+
+  @media screen and (max-width: 991px) {
+    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+  }
+
 `;
 
 export const InfoRow = styled.div`
@@ -28,6 +40,13 @@ width: 100%;
 margin: 0 5px 5px 5px;
 justify-content: space-between;
 height: 50%;
+overflow-y: scroll;
+
+@media screen and (max-width: 991px) {
+  max-width: 100%;
+  flex-basis: 100%;
+  display: flex;
+}
 
 `
 export const InfoColumn = styled.div`
@@ -41,7 +60,6 @@ padding-left: 15px;
   max-width: 100%;
   flex-basis: 100%;
   display: flex;
-  justify-content: center;
 }
 `
 export const TextWrapper = styled.div`
@@ -83,7 +101,7 @@ export const Img = styled.img`
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 150px;
+  max-height: 130px;
 
 `
 

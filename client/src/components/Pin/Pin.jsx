@@ -1,8 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { PinContainer, PinStyle, PinStyleHover, PinObject } from './Pin.styles'
+import { GalleryContainer, PinContainer, PinStyle, PinStyleHover, PinObject } from './Pin.styles'
 
+import GalleryInfo from '../GalleryInfo/GalleryInfo'
 import Info from '../Info/Info'
+
+import Slide from '@material-ui/core/Slide';
 
 import { setInfo, nullInfo } from '../../reducers/infoReducer'
 
@@ -15,18 +18,26 @@ const Pin = (props) => {
 
   const setInfo = (event) => {
     event.preventDefault()
+    if (props.info && props.info === props.input) {
+      try {
+        props.nullInfo()
+      } catch (e) {
+        console.log(e)
+      }
+    } else {
     try {
       props.setInfo(props.input)
     } catch (e) {
       console.log(e)
     }
-
+}
   }
+
   return (
     <>
-    <Info show={props.input.name}/>
-    <PinContainer>
-
+    <GalleryContainer>
+      <Slide direction="down" in={true} mountOnEnter unmountOnExit style={{ transitionDelay: true ? '500ms' : '0ms' }}>
+      <PinContainer>
       <PinStyle >
           <PinStyleHover onTop={props.show} >
             {props.input.name}
@@ -35,7 +46,9 @@ const Pin = (props) => {
           </PinObject>
       </PinStyle>
     </PinContainer>
-
+  </Slide>
+    <Info show={props.input.name} />
+</GalleryContainer>
 
 </>
   )

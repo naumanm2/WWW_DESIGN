@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { Container } from '../../styles'
 import { Link } from 'react-router-dom'
 
+import { FilterAlt } from '@styled-icons/boxicons-regular/FilterAlt'
+
 export const Nav = styled.nav`
   width: 100%;
   display: flex;
@@ -50,6 +52,15 @@ export const TopMenuLink = styled(Link)`
       color: #ccc;
 
     }
+`;
+
+export const TopMenuFilter = styled(FilterAlt)`
+height: 31px;
+cursor: pointer;
+color: #fff;
+font-weight: bold;
+transition: all 0.3s linear;
+
 `;
 
 

@@ -5,6 +5,8 @@ import {connect} from 'react-redux'
 
 import { nullInfo } from '../../reducers/infoReducer'
 
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
+
 import {
   InfoSection,
   InfoContainer,
@@ -42,7 +44,7 @@ const Info = (props) => {
     return null
   }
   return (
-    <div>
+    <ClickAwayListener onClickAway={handleClick}>
     <InfoSection>
       <InfoContainer>
         <InfoRow>
@@ -65,7 +67,7 @@ const Info = (props) => {
           <InfoColumn>
             <TopLine>
               <Name>
-                nameofexhibition
+                {props.info.name}
               </Name>
             </TopLine>
             <InfoText>
@@ -116,7 +118,7 @@ const Info = (props) => {
         </InfoRow>
       </InfoContainer>
     </InfoSection>
-  </div>
+  </ClickAwayListener>
 )
 }
 

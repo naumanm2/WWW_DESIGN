@@ -1,4 +1,4 @@
-export const toggleMenu = (data) => {
+export const toggleDrawer = (data) => {
   return async dispatch => {
     dispatch({
       type: 'TOGGLE_MENU',

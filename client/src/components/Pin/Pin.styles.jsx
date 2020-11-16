@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 import { Container } from '../../styles'
 
-import { MapPin } from '@styled-icons/boxicons-regular/'
+import { Location } from '@styled-icons/ionicons-sharp/Location'
 
 const size = '40px';
 const hsize = '20px';
 
 export const PinContainer = styled(Container)`
-  position: absolute;
+  position: relative;
   width: ${size};
   height: ${size};
   left: -${hsize};
@@ -41,7 +41,7 @@ export const PinStyleHover = styled.div`
 
 `;
 
-export const PinObject = styled(MapPin)`
+export const PinObject = styled(Location)`
   position: absolute;
   width: ${({onTop}) => onTop ? '40px' : '30px'};
   height: ${({onTop}) => onTop ? '40px' : '30px'};
@@ -51,3 +51,7 @@ export const PinObject = styled(MapPin)`
 
   transition: all 0.3s linear;
 `;
+
+export const GalleryContainer = styled.div`
+
+`
