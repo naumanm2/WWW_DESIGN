@@ -3,6 +3,9 @@ import { Container } from '../../styles'
 
 import { Close } from '@styled-icons/evil/Close'
 
+import {LeftArrowAlt} from '@styled-icons/boxicons-regular/LeftArrowAlt'
+import {RightArrowAlt} from '@styled-icons/boxicons-regular/RightArrowAlt'
+
 export const InfoContainer = styled(Container)`
   display: flex;
   position: absolute;
@@ -13,6 +16,7 @@ export const InfoContainer = styled(Container)`
   height: 300px;
   flex-flow: column nowrap;
   overflow: hidden;
+  z-index: 100;
   ${Container}
 `;
 
@@ -112,6 +116,19 @@ export const CloseBtn = styled(Close)`
   top: -10px;
   cursor: pointer;
   color: #363636;
+`
+
+export const LeftArrow = styled(LeftArrowAlt)`
+  color: #363636;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+`
+export const RightArrow = styled(RightArrowAlt)`
+  color: #363636;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 `
 
 export const Description = styled.p`

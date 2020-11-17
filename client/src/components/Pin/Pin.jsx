@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import { GalleryContainer, PinContainer, PinStyle, PinStyleHover, PinObject } from './Pin.styles'
 
@@ -40,14 +40,14 @@ const Pin = (props) => {
       <PinContainer>
       <PinStyle >
           <PinStyleHover onTop={props.show} >
-            {props.input.name}
+            {props.input.museumName}
           </PinStyleHover>
           <PinObject onTop={props.show} onClick={setInfo}>
           </PinObject>
       </PinStyle>
     </PinContainer>
   </Slide>
-    <Info show={props.input.name} />
+    <Info show={props.input.museumName} />
 </GalleryContainer>
 
 </>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 
 import {connect} from 'react-redux'
@@ -8,6 +8,8 @@ import { nullInfo } from '../../reducers/infoReducer'
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 import Grow from '@material-ui/core/Grow';
+
+
 
 import {
   InfoSection,
@@ -25,10 +27,14 @@ import {
   OpeningHours,
   Clock,
   Site,
-  CloseBtn
+  CloseBtn,
+  LeftArrow,
+  RightArrow
 } from './Info.styles'
 
 const Info = (props) => {
+  const [slide, setSlide] = useState(0)
+
   console.log(props.info)
 
   const handleClick = (event) => {
@@ -39,10 +45,19 @@ const Info = (props) => {
       console.log(e)
     }
   }
+  const handleLeftClick = (event) => {
+    event.preventDefault()
+    setSlide((slide-1)%props.info.description.length)
+  }
+  const handleRightClick = (event) => {
+    event.preventDefault()
+    setSlide((slide+1)%props.info.description.length)
+    console.log(slide)
+  }
 
 
-
-  if (!props.info || !props.show || props.show !== props.info.name) {
+  console.log(props.show)
+  if (!props.info || !props.show || props.show !== props.info.museumName) {
     return null
   }
   return (
@@ -53,14 +68,15 @@ const Info = (props) => {
           <InfoRow>
             <InfoColumn>
               <ImgWrapper>
-                <Img src={`${props.info.picture}`} alt={`${props.info.name}`}></Img>
+                <Img src={`${props.info.picture}`} alt={`${props.info.museumName}`}></Img>
               </ImgWrapper>
             </InfoColumn>
             <InfoColumn>
               <InfoText>
                 <Description>
-                  {props.info.description}
+                  {props.info.description[slide]}
                 </Description>
+                <LeftArrow onClick={handleLeftClick}/><RightArrow onClick={handleRightClick}/>
               </InfoText>
             </InfoColumn>
             <CloseBtn onClick={handleClick}>
@@ -70,7 +86,7 @@ const Info = (props) => {
             <InfoColumn>
               <TopLine>
                 <Name>
-                  {props.info.name}
+                  {props.info.museumName}
                 </Name>
               </TopLine>
               <InfoText>
@@ -99,8 +115,9 @@ const Info = (props) => {
                 </OpeningHours>
               </TopLine>
               <InfoText>
-                <Clock>ma 12-18</Clock>
-                <Clock>ti 12-18</Clock>
+                  {props.info.openingHours.map(x => (
+                    <Clock>{x}</Clock>
+                  ))}
               </InfoText>
             </InfoColumn>
             <InfoColumn>

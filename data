@@ -35,11 +35,20 @@ const museums = [{
 },
 {
   type: "exhibition",
-  name: "Kiasma",
-  exhibitionStart: '02-06-2020',
-  exhibitionEnd: '10-01-2021',
-  openingHour: '2012-25-12',
-  closingHour: '2012-28-12',
+  museumName: "Kiasma",
+  exhibitionDuration: [
+    "25-12-2012-"
+  ],
+  openingHours: [
+    "ma: suljettu",
+    "ti: 10-18",
+    "ke: 10-20",
+    "to: 10-20",
+    "pe: 10-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
   address: "Mannerheiminaukio 2, 00100 Helsinki",
   keywords: [
     "Seppo Fränti", "nykytaide", "maalaustaide"
@@ -56,11 +65,20 @@ const museums = [{
 },
 {
   type: "exhibition",
-  name: "K1 Kämp Galleria",
-  exhibitionStart: '20-08-2020',
-  exhibitionEnd: '20-12-2020',
-  openingHour: '2012-25-12',
-  closingHour: '2012-28-12',
+  museumName: "K1 Kämp Galleria",
+  exhibitionDuration: [
+    "25-12-2012-"
+  ],
+  openingHours: [
+    "ma: suljettu",
+    "ti: 10-18",
+    "ke: 10-20",
+    "to: 10-20",
+    "pe: 10-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
   address: "Pohjoisesplanadi 33, 00100 Helsinki",
   keywords: [
     "Marilyn Monroe", "Coco Chanel", "Douglas Kirkland", "Hollywood", "valokuvataide"
@@ -77,11 +95,20 @@ const museums = [{
 },
 {
   type: "exhibition",
-  name: "Amox Rex",
-  exhibitionStart: '09-10-2020',
-  exhibitionEnd: '21-03-2021',
-  openingHour: '2012-25-12',
-  closingHour: '2012-28-12',
+  museumName: "Amox Rex",
+  exhibitionDuration: [
+    "25-12-2012-"
+  ],
+  openingHours: [
+    "ma: suljettu",
+    "ti: 10-18",
+    "ke: 10-20",
+    "to: 10-20",
+    "pe: 10-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
   address: "Mannerheimintie 22-24, 00100 Helsinki",
   keywords: [
     "Egyptin loisto", "historia", "Museo Egizio", "faarao"
@@ -98,11 +125,20 @@ const museums = [{
 },
 {
   type: "exhibition",
-  name: "Taidehalli",
-  exhibitionStart: '15-08-2020',
-  exhibitionEnd: '25-10-2020',
-  openingHour: '2012-25-12',
-  closingHour: '2012-28-12',
+  museumName: "Taidehalli",
+  exhibitionDuration: [
+    "25-12-2012-"
+  ],
+  openingHours: [
+    "ma: suljettu",
+    "ti: 10-18",
+    "ke: 10-20",
+    "to: 10-20",
+    "pe: 10-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
   address: "Nervanderinkatu 3, 00100 Helsinki",
   keywords: [
     "Valon ja varjon välissä", "Patricia Piccinini", "veistos", "maalaus", "videotaide"
