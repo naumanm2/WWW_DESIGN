@@ -13,7 +13,7 @@ export const MapContainer = styled.div`
 
 export const ClusterMarker = styled.div`
   color: #fff;
-  background: #1978c8;
+  background: #363636;
   border-radius: 50%;
   padding: 10px;
   display: flex;

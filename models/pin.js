@@ -15,12 +15,9 @@ const schema = new mongoose.Schema({
   exhibitionEnd: {
     type: String
   },
-  openingHour: {
-    type: String
-  },
-  closingHour: {
-    type: String
-  },
+  openingHours: [
+    { type: String } 
+  ],
   address: {
     type: String
   },

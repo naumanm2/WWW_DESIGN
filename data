@@ -3,8 +3,16 @@ const museums = [{
   name: "Ateneum",
   exhibitionStart: '25-12-2012',
   exhibitionEnd: '28-12-2012',
-  openingHour: '2012-25-12',
-  closingHour: '2012-28-12',
+  openingHours: [
+    "ma: suljettu",
+    "ti: 10-18",
+    "ke: 10-20",
+    "to: 10-20",
+    "pe: 10-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
   address: "Kaivokatu 7, 00100 Helsinki",
   keywords: [
     "Suomen taiteen tarina", "taide", "maalaus"
