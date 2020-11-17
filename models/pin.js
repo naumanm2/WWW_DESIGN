@@ -5,18 +5,18 @@ const schema = new mongoose.Schema({
     type: String,
     required: true
   },
-  name: {
+  MuseumName: {
     type: String,
     required: true
-  },
-  exhibitionStart: {
-    type: String
-  },
-  exhibitionEnd: {
-    type: String
-  },
+  }
+  ExhibitionName: [
+    { type: String }
+  ],
+  exhibitionDuration: [
+    { type: String }
+  ],
   openingHours: [
-    { type: String } 
+    { type: String }
   ],
   address: {
     type: String
@@ -35,9 +35,9 @@ const schema = new mongoose.Schema({
   link: {
     type: String
   },
-  description: {
-    type: String
-  },
+  description: [
+  { type: String }
+  ],
   museocard: {
     type: Boolean,
     required: true
