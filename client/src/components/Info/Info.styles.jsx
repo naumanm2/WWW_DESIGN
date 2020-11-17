@@ -20,7 +20,7 @@ export const InfoSection = styled.div`
   color: #fff;
   position: relative;
   left: -230px;
-  top: -330px;
+  top: -360px;
   background-color: #fff;
   transition: all 0.2s linear;
   z-index: 10;

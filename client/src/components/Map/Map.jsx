@@ -19,10 +19,13 @@ const Map = (props) => {
 
   const mapRef = useRef()
 
+  const filteredPins = props.pins.filter(x =>
+    !props.filter || (x.name.toLowerCase().indexOf(props.filter.toLowerCase()) !== -1)
+  )
 
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(10)
-  const points = props.pins.map(pin => ({
+  const points = filteredPins.map(pin => ({
     type: "Feature",
     properties: {
       cluster: false, ...pin
@@ -61,7 +64,11 @@ const Map = (props) => {
      setShow('')
    }
 
-   const markers = props.pins.map(pin =>
+
+
+   console.log(filteredPins)
+
+   const markers = filteredPins.map(pin =>
      <Pin
        key={pin._id}
        lat={pin.lat.$numberDecimal}
@@ -147,7 +154,8 @@ const Map = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    pins: state.pins
+    pins: state.pins,
+    filter: state.filter
   }
 
 }

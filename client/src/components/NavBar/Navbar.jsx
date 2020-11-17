@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -12,9 +12,11 @@ import { useStyles } from './NavBar.styles'
 import { connect } from 'react-redux'
 
 import { toggleDrawer } from '../../reducers/menuReducer'
+import { setFilter } from '../../reducers/filterReducer'
 
 
 const SearchAppBar = (props) => {
+
   const classes = useStyles();
 
   const handleClick = (event) => {
@@ -26,6 +28,7 @@ const SearchAppBar = (props) => {
     }
   }
 
+  console.log(classes.inputInput)
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -54,6 +57,7 @@ const SearchAppBar = (props) => {
               }}
 
               inputProps={{ 'aria-label': 'search' }}
+              onChange={({target}) => props.setFilter(target.value)}
             />
           </div>
         </Toolbar>
@@ -69,7 +73,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-  toggleDrawer
+  toggleDrawer,
+  setFilter
 }
 
 export default connect(

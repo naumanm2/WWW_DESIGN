@@ -7,6 +7,8 @@ import { nullInfo } from '../../reducers/infoReducer'
 
 import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
+import Grow from '@material-ui/core/Grow';
+
 import {
   InfoSection,
   InfoContainer,
@@ -45,79 +47,81 @@ const Info = (props) => {
   }
   return (
     <ClickAwayListener onClickAway={handleClick}>
-    <InfoSection>
-      <InfoContainer>
-        <InfoRow>
-          <InfoColumn>
-            <ImgWrapper>
-              <Img src={`${props.info.picture}`} alt={`${props.info.name}`}></Img>
-            </ImgWrapper>
-          </InfoColumn>
-          <InfoColumn>
-            <InfoText>
-              <Description>
-                {props.info.description}
-              </Description>
-            </InfoText>
-          </InfoColumn>
-          <CloseBtn onClick={handleClick}>
-          </CloseBtn>
-        </InfoRow>
-        <InfoRow>
-          <InfoColumn>
-            <TopLine>
-              <Name>
-                {props.info.name}
-              </Name>
-            </TopLine>
-            <InfoText>
-              <Address>
-                {props.info.address}
-              </Address>
-            </InfoText>
-            <TopLine>
-              Pääsymaksut
-            </TopLine>
-            {props.info.fees.map(fee => (
+      <Grow in={props.show}>
+      <InfoSection>
+        <InfoContainer>
+          <InfoRow>
+            <InfoColumn>
+              <ImgWrapper>
+                <Img src={`${props.info.picture}`} alt={`${props.info.name}`}></Img>
+              </ImgWrapper>
+            </InfoColumn>
+            <InfoColumn>
               <InfoText>
-                {fee}
+                <Description>
+                  {props.info.description}
+                </Description>
               </InfoText>
-            ))}
-            <InfoText>
-              <Museocard>
-                museokortti
-              </Museocard>
-            </InfoText>
-          </InfoColumn>
-          <InfoColumn>
-            <TopLine>
-              <OpeningHours>
-                Aukioloajat
-              </OpeningHours>
-            </TopLine>
-            <InfoText>
-              <Clock>ma 12-18</Clock>
-              <Clock>ti 12-18</Clock>
-            </InfoText>
-          </InfoColumn>
-          <InfoColumn>
-            <TopLine>
-              Avainsanat
-            </TopLine>
-            {props.info.keywords.map(fee => (
+            </InfoColumn>
+            <CloseBtn onClick={handleClick}>
+            </CloseBtn>
+          </InfoRow>
+          <InfoRow>
+            <InfoColumn>
+              <TopLine>
+                <Name>
+                  {props.info.name}
+                </Name>
+              </TopLine>
               <InfoText>
-                {fee}
+                <Address>
+                  {props.info.address}
+                </Address>
               </InfoText>
-            ))}
-            <InfoText>
-              <Site>
-                <a href={`${props.info.link}`}>{props.info.link}</a>
-              </Site>
-          </InfoText>
-          </InfoColumn>
-        </InfoRow>
-      </InfoContainer>
-    </InfoSection>
+              <TopLine>
+                Pääsymaksut
+              </TopLine>
+              {props.info.fees.map(fee => (
+                <InfoText>
+                  {fee}
+                </InfoText>
+              ))}
+              <InfoText>
+                <Museocard>
+                  museokortti
+                </Museocard>
+              </InfoText>
+            </InfoColumn>
+            <InfoColumn>
+              <TopLine>
+                <OpeningHours>
+                  Aukioloajat
+                </OpeningHours>
+              </TopLine>
+              <InfoText>
+                <Clock>ma 12-18</Clock>
+                <Clock>ti 12-18</Clock>
+              </InfoText>
+            </InfoColumn>
+            <InfoColumn>
+              <TopLine>
+                Avainsanat
+              </TopLine>
+              {props.info.keywords.map(fee => (
+                <InfoText>
+                  {fee}
+                </InfoText>
+              ))}
+              <InfoText>
+                <Site>
+                  <a href={`${props.info.link}`}>{props.info.link}</a>
+                </Site>
+            </InfoText>
+            </InfoColumn>
+          </InfoRow>
+        </InfoContainer>
+      </InfoSection>
+    </Grow>
   </ClickAwayListener>
 )
 }

@@ -4,6 +4,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     width: 300,
     flexGrow: 1,
+    backgroundColor: "#363636",
   },
   paper: {
     padding: theme.spacing(2),
