@@ -14,11 +14,11 @@ const museums = [{
   ],
   lat: 60.168665992,
   lng: 24.939829574,
-  picture: "lol",
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/140312YEp001.jpg/1599px-140312YEp001.jpg",
   link: "https://ateneum.fi/nayttelyt/suomen-taiteen-tarina/",
   description: "Ateneumin taidemuseossa on maan vanhin ja laajin taidekokoelma. Kokoelmanäyttely esittää maan rakastetuimmat klassikot uudessa valossa. Se nostaa esiin uusia teoksia ja rinnastuksia, luoden samalla yhteyden niin Suomen kuin maailman historiaan.",
   museocard: true
-}, 
+},
 {
   type: "exhibition",
   name: "Kiasma",
@@ -54,9 +54,9 @@ const museums = [{
   fees: [
     0, 6, 12
   ],
-  lat: 60.168127, 
+  lat: 60.168127,
   lng: 24.946342,
-  picture: "Marilyn Monroe",
+  picture: "https://www.kampgalleria.com/wp-content/uploads/2020/08/k1_marilyn_square.jpg",
   link: "https://www.kampgalleria.com/k1/",
   description: "Suomen valokuvataiteen museon uuden K1-näyttelytilan avajaisnäyttelyinä nähdään kanadalaisen Douglas Kirklandin (s.1934) näyttelyt Coco Chanel sekä Ilta Marilynin kanssa. Näyttelyt tuovat esiin kaksi ikonista naista, jotka ymmärsivät visuaalisuuden voiman.",
   museocard: true
@@ -75,9 +75,9 @@ const museums = [{
   fees: [
     5, 15, 20
   ],
-  lat: 60.170747, 
+  lat: 60.170747,
   lng: 24.936369,
-  picture: "faarao.jpg",
+  picture: "https://amosrex.fi/app/uploads/2019/01/TU-180821-amos-rex-148-e1547454942741.jpg",
   link: "https://amosrex.fi/nayttelyt/egyptin-loisto/",
   description: "Suuri muinaisen Egyptin näyttely vie sinut aikamatkalle tuhansien vuosien taa faraoiden Egyptiin. Näyttely on samanaikaisesti kahdessa paikassa: Helsingin Amos Rexissä sekä Tallinnan Kumu-taidemuseossa. Harvinainen kaksiosainen näyttely pohjautuu Italiassa toimivan Museo Egizion kokoelmaan, joka on suurin muinaisen Egyptin taiteen ja kulttuurin kokoelma Egyptin ulkopuolella.",
   museocard: true
@@ -96,9 +96,9 @@ const museums = [{
   fees: [
     8, 14
   ],
-  lat: 60.172169, 
+  lat: 60.172169,
   lng: 24.931003,
-  picture: "kuva.jpg",
+  picture: "https://taidehalli.fi/wp-content/uploads/2019/02/MG_9432.jpg",
   link: "https://taidehalli.fi/events/patricia-piccinini/",
   description: "Australialainen Patricia Piccinini (s. 1965 Sierra Leonessa) tunnetaan ihmisen kaltaisista, antropomorfisista veistoksistaan. Hänen kiehtovissa teoksissaan yhdistyvät fantasia ja todellisuus, kuviteltu ja todellinen sekä inhimillinen ja kone, tehden mahdottomaksi erotella mistä yksi alkaa ja toinen loppuu.",
   museocard: true
@@ -107,5 +107,3 @@ const museums = [{
 module.exports = {
   museums
 }
-
-
