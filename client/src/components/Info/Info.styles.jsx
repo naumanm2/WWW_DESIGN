@@ -123,12 +123,18 @@ export const LeftArrow = styled(LeftArrowAlt)`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
 `
 export const RightArrow = styled(RightArrowAlt)`
   color: #363636;
   width: 50px;
   height: 50px;
   cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
 `
 
 export const Description = styled.p`
