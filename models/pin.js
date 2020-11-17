@@ -5,11 +5,11 @@ const schema = new mongoose.Schema({
     type: String,
     required: true
   },
-  MuseumName: {
+  museumName: {
     type: String,
     required: true
-  }
-  ExhibitionName: [
+  },
+  exhibitionName: [
     { type: String }
   ],
   exhibitionDuration: [
