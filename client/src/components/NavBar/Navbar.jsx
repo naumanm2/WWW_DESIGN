@@ -7,6 +7,8 @@ import InputBase from '@material-ui/core/InputBase';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
+import logo from './logo3.png'
+
 import { useStyles } from './NavBar.styles'
 
 import { connect } from 'react-redux'
@@ -43,7 +45,7 @@ const SearchAppBar = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            <img src={logo} alt="taidegalleriat" width="200"/>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
