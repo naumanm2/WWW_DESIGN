@@ -15,6 +15,9 @@ const schema = new mongoose.Schema({
   exhibitionDuration: [
     { type: String }
   ],
+  attribution: {
+    type: String
+  },
   openingHours: [
     { type: String }
   ],
