@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Container } from '../../styles'
 
 export const MapContainer = styled.div`
   display: flex;

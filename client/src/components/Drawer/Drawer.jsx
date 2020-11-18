@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-
-import { useStyles } from './Drawer.styles'
+import React from 'react';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InfoIcon from '@material-ui/icons/Info';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 
@@ -20,7 +14,6 @@ import { toggleDrawer } from '../../reducers/menuReducer'
 import { Link } from 'react-router-dom'
 
 const TemporaryDrawer = ({state, toggleDrawer}) => {
-  const classes = useStyles();
 
   const handleClick = (event) => {
     event.preventDefault()

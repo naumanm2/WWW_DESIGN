@@ -1,9 +1,6 @@
 import React, {useState, useRef} from 'react'
 import GoogleMap from 'google-map-react'
-import Info from '../Info/Info'
 import Pin from '../Pin/Pin'
-
-import Supercluster from 'supercluster'
 import useSupercluster from 'use-supercluster';
 
 import {MapContainer, ClusterMarker, mapStyle} from './Map.styles'
@@ -55,16 +52,6 @@ const Map = (props) => {
      setShow('')
    }
 
-
-   const markers = filteredPins.map(pin =>
-     <Pin
-       key={pin._id}
-       lat={pin.lat.$numberDecimal}
-       lng={pin.lng.$numberDecimal}
-       input={pin}
-       show={show===pin._id}>
-     </Pin>
-   )
 
    const createMapOptions = (maps) => {
        return {

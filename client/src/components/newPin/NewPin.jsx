@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import PropTypes from 'prop-types'
 
 import {connect} from 'react-redux'
 
@@ -15,7 +14,6 @@ const NewPin = (props) => {
   const [address, setAddress] = useState('')
   const [lon, setlon] = useState(null)
   const [lat, setlat] = useState(null)
-
   const [keywords, setKeywords] = useState([])
   const [fee, setFee] = useState([])
   const [picture, setPicture] = useState('')

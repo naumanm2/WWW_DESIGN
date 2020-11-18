@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-import NewPin from '../components/newPin/NewPin'
+import NewPin from '../components/NewPin/NewPin'
 import Login from '../components/Login/Login'
 import Logout from '../components/Logout/Logout'
 

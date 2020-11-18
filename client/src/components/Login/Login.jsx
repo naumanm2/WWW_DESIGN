@@ -1,9 +1,8 @@
 import React, {useState} from 'react'
-import PropTypes from 'prop-types'
 
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 
-import {setUser} from '../../reducers/userReducer'
+import { setUser } from '../../reducers/userReducer'
 
 const Login = (props) => {
   const [username, setUsername] = useState('')

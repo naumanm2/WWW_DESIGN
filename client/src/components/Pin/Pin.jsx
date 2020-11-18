@@ -1,20 +1,15 @@
-import React, {useState} from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { GalleryContainer, PinContainer, PinStyle, PinStyleHover, PinObject } from './Pin.styles'
 
-import GalleryInfo from '../GalleryInfo/GalleryInfo'
 import Info from '../Info/Info'
 
 import Slide from '@material-ui/core/Slide';
 
 import { setInfo, nullInfo } from '../../reducers/infoReducer'
-
-
 import { connect } from 'react-redux'
 
 
 const Pin = (props) => {
-  const visibility = { display: props.show ? '' : 'none' }
 
   const setInfo = (event) => {
     event.preventDefault()

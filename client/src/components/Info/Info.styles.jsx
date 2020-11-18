@@ -141,19 +141,3 @@ export const RightArrow = styled(RightArrowAlt)`
     color: #b600ff;
   }
 `
-
-export const Description = styled.p`
-
-`
-export const Name = styled.p`
-
-`
-export const Address = styled.p`
-
-`
-export const Museocard = styled.p`
-`
-export const OpeningHours = styled.p`
-`
-export const Clock = styled.p`
-`

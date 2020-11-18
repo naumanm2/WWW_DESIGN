@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Map from '../components/Map/Map'
 import Navbar from '../components/NavBar/Navbar'
 import Drawer from '../components/Drawer/Drawer'

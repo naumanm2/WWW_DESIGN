@@ -1,5 +1,4 @@
-import React, {useState} from 'react'
-import PropTypes from 'prop-types'
+import React, { useState } from 'react'
 
 import {connect} from 'react-redux'
 
@@ -21,13 +20,6 @@ import {
   ImageText,
   InfoText,
   TopLine,
-  Description,
-  Name,
-  Address,
-  Museocard,
-  OpeningHours,
-  Clock,
-  Site,
   CloseBtn,
   LeftArrow,
   RightArrow
@@ -84,10 +76,10 @@ const Info = (props) => {
                 </TopLine>
                 <InfoText>
                   {props.info.description[slide]}
+                  </InfoText>
                 <TopLine>
                   {props.info.exhibitionDuration[slide]}
                 </TopLine>
-              </InfoText>
             </InfoColumn>
             <InfoColumn>
               <CloseBtn onClick={handleClick}>
@@ -98,14 +90,10 @@ const Info = (props) => {
           <InfoRow>
             <InfoColumn>
               <TopLine>
-                <Name>
                   {props.info.museumName}
-                </Name>
               </TopLine>
               <InfoText>
-                <Address>
                   {props.info.address}
-                </Address>
               </InfoText>
               <TopLine>
                 Pääsymaksut
@@ -121,23 +109,19 @@ const Info = (props) => {
             </InfoColumn>
             <InfoColumn>
               <TopLine>
-                <OpeningHours>
                   Aukioloajat
-                </OpeningHours>
               </TopLine>
-              <InfoText>
                   {props.info.openingHours.map(x => (
-                    <Clock>{x}</Clock>
+                    <InfoText>{x}</InfoText>
                   ))}
-              </InfoText>
             </InfoColumn>
             <InfoColumn>
               <TopLine>
                 Avainsanat
               </TopLine>
-              {props.info.keywords.map(fee => (
+              {props.info.keywords.map(w => (
                 <InfoText>
-                  {fee}
+                  {w}
                 </InfoText>
               ))}
               <InfoText>
