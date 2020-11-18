@@ -35,8 +35,6 @@ import {
 const Info = (props) => {
   const [slide, setSlide] = useState(0)
 
-  console.log(props.info)
-
   const handleClick = (event) => {
     event.preventDefault()
     try {
@@ -48,16 +46,13 @@ const Info = (props) => {
   const handleLeftClick = (event) => {
     event.preventDefault()
     setSlide(Math.abs((slide-1)%props.info.description.length))
-    console.log(slide)
   }
   const handleRightClick = (event) => {
     event.preventDefault()
     setSlide((slide+1)%props.info.description.length)
-    console.log(slide)
   }
 
 
-  console.log(props.show)
   if (!props.info || !props.show || props.show !== props.info.museumName) {
     return null
   }
