@@ -20,7 +20,7 @@ const Map = (props) => {
   const mapRef = useRef()
 
   const filteredPins = props.pins.filter(x =>
-    !props.filter || (x.name.toLowerCase().indexOf(props.filter.toLowerCase()) !== -1)
+    !props.filter || (x.museumName.toLowerCase().indexOf(props.filter.toLowerCase()) !== -1)
   )
 
   const [bounds, setBounds] = useState(null)

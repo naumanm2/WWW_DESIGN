@@ -30,7 +30,6 @@ const SearchAppBar = (props) => {
     }
   }
 
-  console.log(classes.inputInput)
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -42,7 +41,7 @@ const SearchAppBar = (props) => {
             aria-label="open drawer"
             onClick={handleClick}
           >
-            <MenuIcon />
+          <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             <img src={logo} alt="taidegalleriat" width="200"/>

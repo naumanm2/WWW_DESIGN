@@ -36,6 +36,7 @@ export const PinStyleHover = styled.div`
   top: ${({onTop}) => onTop ? '-2em' : '0px'};
   overflow: ${({onTop}) => onTop ? '' : 'hidden'};
   cursor: pointer;
+  z-index: 3;
   color: #fff;
   font-weight: bold;
   transition: all 0.3s linear;

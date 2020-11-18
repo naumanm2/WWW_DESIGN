@@ -20,8 +20,6 @@ import { toggleDrawer } from '../../reducers/menuReducer'
 import { Link } from 'react-router-dom'
 
 const TemporaryDrawer = ({state, toggleDrawer}) => {
-
-  console.log(state)
   const classes = useStyles();
 
   const handleClick = (event) => {
@@ -47,11 +45,7 @@ const TemporaryDrawer = ({state, toggleDrawer}) => {
         </ListItem>
         <ListItem button component={Link} to='/admin'>
           <ListItemIcon> <VpnKeyIcon /> </ListItemIcon>
-          <ListItemText primary="Log in" />
-        </ListItem>
-        <ListItem button component={Link} to='/aboutus'>
-          <ListItemIcon> <InfoIcon /> </ListItemIcon>
-          <ListItemText primary="About us" />
+          <ListItemText primary="Add museum" />
         </ListItem>
       </List>
     </div>
