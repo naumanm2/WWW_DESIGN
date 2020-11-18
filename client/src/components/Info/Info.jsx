@@ -66,6 +66,9 @@ const Info = (props) => {
               <ImgWrapper>
                 <Img src={`${props.info.picture}`} alt={`${props.info.museumName}`}></Img>
               </ImgWrapper>
+              <InfoText>
+                {props.info.attribution}
+              </InfoText>
             </InfoColumn>
             <InfoColumn>
               <LeftArrow onClick={handleLeftClick}/>
