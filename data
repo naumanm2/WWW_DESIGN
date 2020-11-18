@@ -58,13 +58,12 @@ const museums = [{
   ],
   openingHours: [
     "ma: suljettu",
-    "ti: 10-18",
-    "ke: 10-20",
-    "to: 10-20",
-    "pe: 10-18",
-    "la: 10-17",
+    "ti: 10-20:30",
+    "ke: 10-20:30",
+    "to: 10-20:30",
+    "pe: 10-20:30",
+    "la: 10-18",
     "su: 10-17"
-
   ],
   address: "Mannerheiminaukio 2, 00100 Helsinki",
   keywords: [
@@ -132,13 +131,13 @@ const museums = [{
     "25-12-2012-"
   ],
   openingHours: [
-    "ma: suljettu",
-    "ti: 10-18",
-    "ke: 10-20",
-    "to: 10-20",
-    "pe: 10-18",
-    "la: 10-17",
-    "su: 10-17"
+    "ma: 11-18",
+    "ti: suljettu",
+    "ke: 11-20",
+    "to: 11-20",
+    "pe: 11-18",
+    "la: 11-17",
+    "su: 11-17"
 
   ],
   address: "Mannerheimintie 22-24, 00100 Helsinki",
@@ -157,18 +156,64 @@ const museums = [{
 },
 {
   type: "exhibition",
-  museumName: "Taidehalli",
+  museumName: "Designmuseo",
   exhibitionDuration: [
-    "25-12-2012-"
+    "4.2.2017 - ",
+    "16.1.2021 - 28.2.2021",
+    "4.9.2020 - 10.1.2021"
+  ],
+  exhibitionName: [
+    "Utopia nyt – Kertomus suomalaisesta muotoilusta",
+    "Travel as a Tool - Pohjoismaiset muotoilijat tien päällä",
+    "Soil Matters"
   ],
   openingHours: [
     "ma: suljettu",
-    "ti: 10-18",
-    "ke: 10-20",
-    "to: 10-20",
-    "pe: 10-18",
-    "la: 10-17",
-    "su: 10-17"
+    "ti: 11-20",
+    "ke: 11-18",
+    "to: 11-18",
+    "pe: 11-18",
+    "la: 11-18",
+    "su: 11-18"
+
+  ],
+  address: "Korkeavuorenkatu 23, 00130 Helsinki",
+  keywords: [
+    "taideteollisuus", "design", "muotoilu", "palvelumuotoilu", "muoti", "marimekko", "arabia"
+  ],
+  fees: [
+    6, 10, 12
+  ],
+  lat: 60.163078,
+  lng: 24.946535,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Designmuseo_2019.jpg",
+  link: "https://www.designmuseum.fi/fi/nayttelyt/",
+  description: [
+    "Designmuseon kokoelmanäyttely avaa suomalaista muotoiluhistoriaa elävinä tarinoina, tämän päivän teknologiaa ja digitaalisia alustoja hyödyntäen. Näyttely kertoo muotoilun olennaisesta roolista suomalaisen hyvinvointivaltion kehityksessä.",
+    "Travel as a Tool – Pohjoismaiset muotoilijat tien päällä tarkastelee matkustamisen merkitystä pohjoismaisten muotoilijoiden työssä 1940-luvulta tähän päivään. Matkat ovat toimineet uusien ideoiden ja inspiraation lähteinä.",
+    "Soil Matters -näyttely tutkii, miten maaperä ja sen muutokset ovat kietoutuneet yhteen ihmisen toiminnan kanssa. Soil Matters päättää kolmivuotisen näyttelysarjan, jonka avulla on etsitty vaikuttavia ja kriittisiä sisältöjä museon Galleria-tilaan."
+  ],
+  museocard: true
+},
+{
+  type: "exhibition",
+  museumName: "Taidehalli",
+  exhibitionDuration: [
+    "7.11.2020 - 3.1.2021",
+    "16.1.2021 - 28.2.2021"
+  ],
+  exhibitionName: [
+    "Kudottua kauneutta – suomalaisen ryijyn neljä vuosisataa",
+    "Tarja Pitkänen-Walter"
+  ],
+  openingHours: [
+    "ma: suljettu",
+    "ti: 11-18",
+    "ke: 11-20",
+    "to: 11-18",
+    "pe: 11-18",
+    "la: 11-17",
+    "su: 11-17"
 
   ],
   address: "Nervanderinkatu 3, 00100 Helsinki",
@@ -178,11 +223,95 @@ const museums = [{
   fees: [
     8, 14
   ],
-  lat: 60.172169,
-  lng: 24.931003,
-  picture: "https://taidehalli.fi/wp-content/uploads/2019/02/MG_9432.jpg",
-  link: "https://taidehalli.fi/events/patricia-piccinini/",
-  description: "Australialainen Patricia Piccinini (s. 1965 Sierra Leonessa) tunnetaan ihmisen kaltaisista, antropomorfisista veistoksistaan. Hänen kiehtovissa teoksissaan yhdistyvät fantasia ja todellisuus, kuviteltu ja todellinen sekä inhimillinen ja kone, tehden mahdottomaksi erotella mistä yksi alkaa ja toinen loppuu.",
+  lat: 60.172177,
+  lng: 24.931022,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Taidehalli.jpg/1024px-Taidehalli.jpg",
+  link: "https://taidehalli.fi/events",
+  description: [
+    "Kudottua kauneutta – suomalaisen ryijyn neljä vuosisataa esittelee suomalaisen ryijyn värikkäitä vaiheita 1700-luvulta tähän päivään. Laaja ja monipuolinen kokonaisuus näyttää ryijyn rikkauden; sen monet eri muodot, tekstuurit ja kuvioinnit ovat muuttuneet ajassa, palatakseen taas hieman uusiutuneina ruokkimaan ryijyn elävää perinnettä.",
+    "Kuvataiteilija Tarja Pitkänen-Walterin (s. 1960) taiteessa maalauksen moniaistisuus, materiaalisuus ja tilallisuus ovat keskeisessä roolissa. Hän työstää paikkasidonnaisia laajennettuja maalauksia tilaan useilla eri tekniikoilla, tilan käytön ja arkkitehtuurin huomioiden."
+  ],
+  museocard: true
+},
+{
+  type: "exhibition",
+  museumName: "Sinebrychoffin taidemuseo",
+  exhibitionDuration: [
+    "17.9.2020 - 10.1.2021",
+    "11.2.2021 - 9.1.2022"
+  ],
+  exhibitionName: [
+    "Tiepolo - Venetsia Pohjolassa",
+    "Aarteet maailmalta - Mesenaattien matkassa"
+  ],
+  openingHours: [
+    "suljettu",
+    "ti: 11-18",
+    "ke: 11-20",
+    "to: 11-18",
+    "pe: 11-18",
+    "la: 10-17",
+    "su: 10-17"
+
+  ],
+  address: "Bulevardi 40, 00120 Helsinki",
+  keywords: [
+    "Sinebrychoff", "maalaus", "vanhat mestarit", "historia", "Venetsia", "Tiepolo"
+  ],
+  fees: [
+    0, 13, 15
+  ],
+  lat: 60.162511,
+  lng: 24.932555,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Sinebrychoff_interior_01.JPG/1280px-Sinebrychoff_interior_01.JPG",
+  link: "https://sinebrychoffintaidemuseo.fi/nayttelyt/",
+  description: [
+    "Venetsialaisen mestarin Giovanni Battista Tiepolon (1696–1770) kuolemasta tulee kuluneeksi 250 vuotta. Maineikkaan taiteilijan työhuone vastaanotti tilauksia venetsialaisilta aatelisperheiltä ja ulkomaisilta hoveilta. Näyttely kertoo, kuinka Tiepolon taide kulkeutui Italiasta Englantiin ja Pohjois-Eurooppaan aina Venäjälle asti. Esille tulee 23 maalausta ja luonnosta sekä laaja valikoima piirroksia.",
+    "Taidekokoelmat kertovat tarinoita paitsi taiteesta myös aikakauden ihanteista. Parhaimmillaan kokoelman tarkastelu vie lähelle keräilijää. Voi aavistella tämän haaveita, tunteita, toiveita ja odotuksia. Voi päästä mukaan matkoille Euroopan kaupunkivilinään tai idyllisiin maisemiin – yllätyksellisten tai hartaasti suunniteltujen hankintojen äärelle. Esillä on aarteita muun muassa Otto Wilhelm Klinckowströmin, Hjalmar Linderin, Herman Antellin sekä Ester ja Jalo Sihtolan kokoelmista."
+  ],
+  museocard: true
+},
+{
+  type: "exhibition",
+  museumName: "Arkkitehtuurimuseo",
+  exhibitionDuration: [
+    "4.9.2020 - 28.2.2021",
+    "4.9.2020 - 28.2.2021",
+    "23.10.2020 - 5.12.2020",
+    "pysyvä näyttely"
+  ],
+  exhibitionName: [
+    "Suomen arkkitehtuuria – Katsaus 2020",
+    "Another Generosity",
+    "Ihan japanilaista – niin suomalaista: Kaija + Heikki Siren",
+    "Arkkitehtuurimme vuosikymmenet 1900–1970"
+  ],
+  openingHours: [
+    "suljettu",
+    "ti: 11-18",
+    "ke: 11-20",
+    "to: 11-18",
+    "pe: 11-18",
+    "la: 11-18",
+    "su: 11-18"
+
+  ],
+  address: "Kasarmikatu 24, 00130 Helsinki",
+  keywords: [
+    "arkkitehtuuri", "Siren", "Japani", "arkkitehti"
+  ],
+  fees: [
+    0, 5, 10
+  ],
+  lat: 60.163135,
+  lng: 24.947775,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Suomen_arkkitehtuurimuseon_portaikko_2017-03-31.jpg/768px-Suomen_arkkitehtuurimuseon_portaikko_2017-03-31.jpg",
+  link: "https://www.mfa.fi/nayttelyt/",
+  description: [
+    "Suomen arkkitehtuurin kaksivuotiskatsaus tarjoaa läpileikkauksen kotimaisen nykyarkkitehtuurin ajankohtaisiin ilmiöihin ja korkeatasoisiin toteutuksiin. Katsauksen järjestävät yhdessä Arkkitehtuurimuseo, Suomen arkkitehtiliitto SAFA ja Alvar Aalto -säätiö, ja sen tuomariston muodostaa kansainvälinen kokoonpano arkkitehtuurin ammattilaisia.",
+    "Pohjoismaiden paviljongissa Venetsian kansainvälisessä arkkitehtuuribiennaalissa 2018 esitelty Another Generosity -installaatio saa ensiesityksensä kotimaassa. Arkkitehti Eero Lundénin työryhmänsä kanssa suunnittelema hengittävä installaatio herättää tarkastelemaan maailman ja arkkitehtuurin tilaa ja luo Arkkitehtuurimuseoon tulevaisuuden pohtimisen paikan.",
+    "Arkkitehtipariskunta Kaija Siren (1920–2001) ja Heikki Siren (1918–2013) suunnittelivat ja toteuttivat useita kohteita suomalaisarkkitehtien ihailemaan Japaniin. Näyttely avaa arkkitehtien pitkäaikaista suhdetta Japaniin esitellen puuarkkitehtuurikohteita Suomessa ja Japanissa. Ääneen pääsevät Sirenien lisäksi japanilaiset arkkitehtuurin asiantuntijat."
+  ],
   museocard: true
 }]
 
