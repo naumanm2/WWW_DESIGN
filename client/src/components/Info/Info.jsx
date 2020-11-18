@@ -18,6 +18,7 @@ import {
   InfoColumn,
   ImgWrapper,
   Img,
+  ImageText,
   InfoText,
   TopLine,
   Description,
@@ -66,9 +67,9 @@ const Info = (props) => {
               <ImgWrapper>
                 <Img src={`${props.info.picture}`} alt={`${props.info.museumName}`}></Img>
               </ImgWrapper>
-              <InfoText>
+              <ImageText>
                 {props.info.attribution}
-              </InfoText>
+              </ImageText>
             </InfoColumn>
             <InfoColumn>
               <LeftArrow onClick={handleLeftClick}/>

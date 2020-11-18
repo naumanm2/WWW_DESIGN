@@ -1,12 +1,12 @@
 import React, {useState, useRef} from 'react'
-import GoogleMapReact from 'google-map-react'
+import GoogleMap from 'google-map-react'
 import Info from '../Info/Info'
 import Pin from '../Pin/Pin'
 
 import Supercluster from 'supercluster'
 import useSupercluster from 'use-supercluster';
 
-import {MapContainer, ClusterMarker} from './Map.styles'
+import {MapContainer, ClusterMarker, mapStyle} from './Map.styles'
 
 import { connect } from 'react-redux'
 
@@ -65,9 +65,6 @@ const Map = (props) => {
    }
 
 
-
-   console.log(filteredPins)
-
    const markers = filteredPins.map(pin =>
      <Pin
        key={pin._id}
@@ -78,19 +75,31 @@ const Map = (props) => {
      </Pin>
    )
 
+   const createMapOptions = (maps) => {
+       return {
+         panControl: false,
+         mapTypeControl: false,
+         scrollwheel: false,
+         styles: mapStyle,
+       }
+     }
 
   return (
     <MapContainer>
 
-      <GoogleMapReact
+      <GoogleMap
+        bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
         defaultCenter={props.center}
         defaultZoom={props.zoom}
+        options={createMapOptions}
         onChildMouseEnter={onChildMouseEnter}
         onChildMouseLeave={onChildMouseLeave}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => {
           mapRef.current = map
-          console.log(maps)
+          console.log(map)
+          mapRef.current.styles = mapStyle
+          console.log(map.styles)
         }}
         onChange={({ zoom, bounds }) => {
           setZoom(zoom)
@@ -107,7 +116,6 @@ const Map = (props) => {
           const {cluster: isCluster, point_count: pointCount} = cluster.properties
 
           if (isCluster) {
-            console.log(mapRef.current)
             return (
               <Marker
                 key={`cluster-${cluster.id}`}
@@ -135,21 +143,16 @@ const Map = (props) => {
             )
           }
           return (
-            <Pin
-              key={`pin-${cluster.properties._id}`}
-              lat={latitude}
-              lng={longitude}
-              input={cluster.properties}
-              show={show===`pin-${cluster.properties._id}`}>
-            >
-            </Pin>
+              <Pin
+                key={`pin-${cluster.properties._id}`}
+                lat={latitude}
+                lng={longitude}
+                input={cluster.properties}
+                show={show===`pin-${cluster.properties._id}`}>
+              </Pin>
           )
         })}
-
-
-
-
-      </GoogleMapReact>
+      </GoogleMap>
   </MapContainer>
   )
 }

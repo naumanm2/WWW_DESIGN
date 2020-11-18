@@ -92,6 +92,12 @@ export const InfoText = styled.p`
   font-size: 12px;
   color: ${({ light}) => (light ? '#fff' : '#363636')};
 `
+export const ImageText = styled.p`
+  width: 100%;
+  max-width: 120px;
+  font-size: 6px;
+  color: ${({ light}) => (light ? '#fff' : '#363636')};
+`
 
 export const ImgWrapper = styled.div`
   width: 30%;
