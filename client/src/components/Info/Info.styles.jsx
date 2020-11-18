@@ -66,6 +66,7 @@ padding-left: 15px;
   display: flex;
 }
 `
+
 export const TextWrapper = styled.div`
 max-width: 540px;
 padding-top: 0;
@@ -111,8 +112,8 @@ export const Img = styled.img`
 
 export const CloseBtn = styled(Close)`
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   top: -10px;
   cursor: pointer;
   color: #363636;
@@ -123,6 +124,8 @@ export const LeftArrow = styled(LeftArrowAlt)`
   width: 20px;
   height: 20px;
   cursor: pointer;
+  position: relative;
+  top: 120px;
   &:hover {
     color: #fff;
   }
@@ -132,6 +135,8 @@ export const RightArrow = styled(RightArrowAlt)`
   width: 20px;
   height: 20px;
   cursor: pointer;
+  position: relative;
+  top: 100px;
   &:hover {
     color: #fff;
   }

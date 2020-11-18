@@ -68,15 +68,23 @@ const Info = (props) => {
               </ImgWrapper>
             </InfoColumn>
             <InfoColumn>
-              <InfoText>
+              <LeftArrow onClick={handleLeftClick}/>
+            </InfoColumn>
+            <InfoColumn>
+                <TopLine>
+                  {props.info.exhibitionName[slide]}
+                </TopLine>
+                <InfoText>
                 <Description>
                   {props.info.description[slide]}
                 </Description>
-                <LeftArrow onClick={handleLeftClick}/><RightArrow onClick={handleRightClick}/>
               </InfoText>
             </InfoColumn>
-            <CloseBtn onClick={handleClick}>
-            </CloseBtn>
+            <InfoColumn>
+              <CloseBtn onClick={handleClick}>
+              </CloseBtn>
+              <RightArrow onClick={handleRightClick}/>
+            </InfoColumn>
           </InfoRow>
           <InfoRow>
             <InfoColumn>
