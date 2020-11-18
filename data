@@ -21,7 +21,7 @@ const museums = [{
     "su: 10-17"
 
   ],
-  attribution: "ateneum-fo"
+  attribution: "ateneum-fo",
   address: "Kaivokatu 7, 00100 Helsinki",
   keywords: [
     "ateneum", "taide", "maalaus", "karin hellman", "åke hellman", "magnus enckell"
