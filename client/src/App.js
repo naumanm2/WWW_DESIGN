@@ -7,7 +7,7 @@ import GlobalStyle from './styles'
 
 import { connect } from 'react-redux'
 
-import { Switch, Route, Link } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import { initData } from './reducers/pinReducer'
 import { initUser } from './reducers/userReducer'

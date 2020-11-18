@@ -63,7 +63,7 @@ const Info = (props) => {
   }
   return (
     <ClickAwayListener onClickAway={handleClick}>
-      <Grow in={props.show===props.info.museumName}>
+      <Grow in={true}>
       <InfoSection>
         <InfoContainer>
           <InfoRow>
@@ -83,9 +83,10 @@ const Info = (props) => {
                   {props.info.exhibitionName[slide]}
                 </TopLine>
                 <InfoText>
-                <Description>
                   {props.info.description[slide]}
-                </Description>
+                <TopLine>
+                  {props.info.exhibitionDuration[slide]}
+                </TopLine>
               </InfoText>
             </InfoColumn>
             <InfoColumn>

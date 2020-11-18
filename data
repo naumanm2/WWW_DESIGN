@@ -31,7 +31,8 @@ const museums = [{
   ],
   lat: 60.170090,
   lng: 24.944113,
-  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Ateneum_20180801.jpg/1280px-Ateneum_20180801.jpg",
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ateneum_Helsinki.jpg/1024px-Ateneum_Helsinki.jpg",
+  attribution: "Kuva: Arkkipuudeli - Oma teos, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27171864",
   link: "https://ateneum.fi/nayttelyt/",
   description: [
     "Ateneumin taidemuseossa on maan vanhin ja laajin taidekokoelma. Kokoelmanäyttely esittää maan rakastetuimmat klassikot uudessa valossa. Se nostaa esiin uusia teoksia ja rinnastuksia, luoden samalla yhteyden niin Suomen kuin maailman historiaan.",
@@ -76,6 +77,7 @@ const museums = [{
   lat: 60.171985,
   lng: 24.936742,
   picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Kiasma_at_night%2C_2009.jpg/1024px-Kiasma_at_night%2C_2009.jpg",
+  attribution: "Kuva: Museum of Contemporary Art Kiasma, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38546510",
   link: "https://kiasma.fi/nayttelyt",
   description: [
     "Doug Aitkenin hypnoottiset teokset kutsuvat uppoutumaan äänen ja kuvan maailmaan. I Only Have Eyes for You on arvostetun amerikkalaistaiteilijan ensimmäinen yksityisnäyttely Suomessa.",
@@ -117,7 +119,8 @@ const museums = [{
   ],
   lat: 60.168127,
   lng: 24.946342,
-  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Galleria_esplanad.jpg/682px-Galleria_esplanad.jpg",
+  picture: "https://upload.wikimedia.org/wikipedia/commons/6/60/Valokuvataiteen_museo_K1.jpg",
+  attribution: "Kuva: Tintamareski - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=93299868",
   link: "https://www.kampgalleria.com/k1/",
   description: [
     "Suomen valokuvataiteen museon uuden K1-näyttelytilan avajaisnäyttelyinä nähdään kanadalaisen Douglas Kirklandin (s.1934) näyttelyt Coco Chanel sekä Ilta Marilynin kanssa. Näyttelyt tuovat esiin kaksi ikonista naista, jotka ymmärsivät visuaalisuuden voiman.",
@@ -151,6 +154,7 @@ const museums = [{
   lat: 60.170747,
   lng: 24.936369,
   picture: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Amos_Rex_aukio.jpg",
+  attribution: "Kuva: Kulttuurinavigaattori - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72197979",
   link: "https://amosrex.fi/nayttelyt/",
   description: "Suuri muinaisen Egyptin näyttely vie sinut aikamatkalle tuhansien vuosien taa faraoiden Egyptiin. Näyttely on samanaikaisesti kahdessa paikassa: Helsingin Amos Rexissä sekä Tallinnan Kumu-taidemuseossa. Harvinainen kaksiosainen näyttely pohjautuu Italiassa toimivan Museo Egizion kokoelmaan, joka on suurin muinaisen Egyptin taiteen ja kulttuurin kokoelma Egyptin ulkopuolella.",
   museocard: true
@@ -188,6 +192,7 @@ const museums = [{
   lat: 60.163078,
   lng: 24.946535,
   picture: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Designmuseo_2019.jpg",
+  attribution: "Kuva: Vadelmavene - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=94933669",
   link: "https://www.designmuseum.fi/fi/nayttelyt/",
   description: [
     "Designmuseon kokoelmanäyttely avaa suomalaista muotoiluhistoriaa elävinä tarinoina, tämän päivän teknologiaa ja digitaalisia alustoja hyödyntäen. Näyttely kertoo muotoilun olennaisesta roolista suomalaisen hyvinvointivaltion kehityksessä.",
@@ -226,7 +231,8 @@ const museums = [{
   ],
   lat: 60.172177,
   lng: 24.931022,
-  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Taidehalli.jpg/1024px-Taidehalli.jpg",
+  picture: "https://en.wikipedia.org/wiki/Kunsthalle_Helsinki#/media/File:Taidehalli_Helsinki.jpg",
+  attribution: "Kuva: MyName (Mahlum) - Oma teos, Julkinen Domain, https://commons.wikimedia.org/w/index.php?curid=2412589",
   link: "https://taidehalli.fi/events",
   description: [
     "Kudottua kauneutta – suomalaisen ryijyn neljä vuosisataa esittelee suomalaisen ryijyn värikkäitä vaiheita 1700-luvulta tähän päivään. Laaja ja monipuolinen kokonaisuus näyttää ryijyn rikkauden; sen monet eri muodot, tekstuurit ja kuvioinnit ovat muuttuneet ajassa, palatakseen taas hieman uusiutuneina ruokkimaan ryijyn elävää perinnettä.",
@@ -265,6 +271,7 @@ const museums = [{
   lat: 60.162511,
   lng: 24.932555,
   picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Sinebrychoff_interior_01.JPG/1280px-Sinebrychoff_interior_01.JPG",
+  attribution: "Kuva: Bengt Oberger - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=41384737",
   link: "https://sinebrychoffintaidemuseo.fi/nayttelyt/",
   description: [
     "Venetsialaisen mestarin Giovanni Battista Tiepolon (1696–1770) kuolemasta tulee kuluneeksi 250 vuotta. Maineikkaan taiteilijan työhuone vastaanotti tilauksia venetsialaisilta aatelisperheiltä ja ulkomaisilta hoveilta. Näyttely kertoo, kuinka Tiepolon taide kulkeutui Italiasta Englantiin ja Pohjois-Eurooppaan aina Venäjälle asti. Esille tulee 23 maalausta ja luonnosta sekä laaja valikoima piirroksia.",
@@ -307,11 +314,96 @@ const museums = [{
   lat: 60.163135,
   lng: 24.947775,
   picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Suomen_arkkitehtuurimuseon_portaikko_2017-03-31.jpg/768px-Suomen_arkkitehtuurimuseon_portaikko_2017-03-31.jpg",
+  attribution: "Kuva: Eteil - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72874266",
   link: "https://www.mfa.fi/nayttelyt/",
   description: [
     "Suomen arkkitehtuurin kaksivuotiskatsaus tarjoaa läpileikkauksen kotimaisen nykyarkkitehtuurin ajankohtaisiin ilmiöihin ja korkeatasoisiin toteutuksiin. Katsauksen järjestävät yhdessä Arkkitehtuurimuseo, Suomen arkkitehtiliitto SAFA ja Alvar Aalto -säätiö, ja sen tuomariston muodostaa kansainvälinen kokoonpano arkkitehtuurin ammattilaisia.",
     "Pohjoismaiden paviljongissa Venetsian kansainvälisessä arkkitehtuuribiennaalissa 2018 esitelty Another Generosity -installaatio saa ensiesityksensä kotimaassa. Arkkitehti Eero Lundénin työryhmänsä kanssa suunnittelema hengittävä installaatio herättää tarkastelemaan maailman ja arkkitehtuurin tilaa ja luo Arkkitehtuurimuseoon tulevaisuuden pohtimisen paikan.",
     "Arkkitehtipariskunta Kaija Siren (1920–2001) ja Heikki Siren (1918–2013) suunnittelivat ja toteuttivat useita kohteita suomalaisarkkitehtien ihailemaan Japaniin. Näyttely avaa arkkitehtien pitkäaikaista suhdetta Japaniin esitellen puuarkkitehtuurikohteita Suomessa ja Japanissa. Ääneen pääsevät Sirenien lisäksi japanilaiset arkkitehtuurin asiantuntijat."
+  ],
+  museocard: true
+},
+{
+  type: "exhibition",
+  museumName: "HAM Helsingin taidemuseo",
+  exhibitionDuration: [
+    "13.11.2020 - 24.10.2021",
+    "13.11.2020 - 4.4.2021",
+    "2.6.2020 - 17.1.2021"
+  ],
+  exhibitionName: [
+    "Lallukka – Elämää taiteilijakodissa",
+    "Perttu Saksa – Valkoinen kaari",
+    "Gustafsson&Haapoja: Museum of Becoming"
+  ],
+  openingHours: [
+    "suljettu",
+    "ti: 11-19",
+    "ke: 11-19",
+    "to: 11-19",
+    "pe: 11-19",
+    "la: 11-19",
+    "su: 11-19"
+
+  ],
+  address: "Eteläinen Rautatiekatu 8, Tennispalatsi 2.krs, 00110 Helsinki",
+  keywords: [
+    "kuvataide", "taide", "Helsinki", "nykytaide"
+  ],
+  fees: [
+    0, 10, 12
+  ],
+  lat: 60.170009,
+  lng: 24.929887,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tennispalatsi_Helsinki.jpg/1280px-Tennispalatsi_Helsinki.jpg",
+  attribution: "Kuva: Arkkipuudeli - Oma teos, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27626228",
+  link: "https://www.hamhelsinki.fi/nayttelyt",
+  description: [
+    "Helsingin Etu-Töölössä sijaitseva Juho ja Maria Lallukan testamenttivaroilla rakennettu taiteilijakoti on suomalainen kulttuurimonumentti vailla vertaa. Komean funkistalon seinien suojissa ovat maalanneet ja veistäneet taidekentän merkkihenkilöt. Taiteilijakodin ideaan kuuluu, että koti ja työpaikka ovat saman katon alla.",
+    "Kuvataiteilija Perttu Saksa (s. 1977) on tunnettu vahvoista ja tiivistunnelmaisista valokuvistaan, joissa yhdistyy visuaalinen tarkkuus sisällölliseen monikerroksellisuuteen. Uusissa valokuvasarjoissaan teosten aiheina on ollut toisen taiteilijan, kuvanveistäjä Laila Pullisen (1933—2015) jäämistö, erityisesti hänen käyttämänsä työkalut.",
+    "Gustafsson&Haapoja on kuvataitelija Terike Haapojan ja kirjailija-dramaturgi Laura Gustafssonin yhteistyöhanke. Vuonna 2012 alkaneessa taiteilijakaksikon yhteistyössä tutkitaan historiaa ja yhteiskuntaa ei-ihmiskeskeisyyden näkökulmasta. Työskentelyssään Gustafsson&Haapoja on purkanut mm. ihmisen ja eläimen käsitteitä sekä niiden kytkeytymistä rodullistamiseen, seksismiin ja muihin yhteiskunnallisen ulossulkemisen mekanismeihin."
+  ],
+  museocard: true
+},
+{
+  type: "exhibition",
+  museumName: "Suomen valokuvataiteen museo",
+  exhibitionDuration: [
+    "16.10.2020 - 22.11.2020",
+    "25.9.2020 - 6.1.2021",
+    "25.9.2020 - 6.1.2021"
+  ],
+  exhibitionName: [
+    "Clare Gallagher: The Second Shift",
+    "Tunteiden maantiede",
+    "Minna L. Henriksson: Sensitometrinen koe Polaroidilla"
+  ],
+  openingHours: [
+    "suljettu",
+    "ti: 11-18",
+    "ke: 11-20",
+    "to: 11-18",
+    "pe: 11-18",
+    "la: 11-18",
+    "su: 11-18"
+
+  ],
+  address: "Kaapelitehdas, Tallberginkatu 1G, 00180 Helsinki",
+  keywords: [
+    "valokuvaus", "valokuvataide"
+  ],
+  fees: [
+    0, 5, 10
+  ],
+  lat: 60.161953,
+  lng: 24.905742,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/f/f1/Tuo_kulttuuri_Wikipediaan-_Valokuvataiteen_museo_%2815617291557%29.jpg",
+  attribution: "Kuva: Wikimedia Finland - Tuo kulttuuri Wikipediaan: Valokuvataiteen museo, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=38626629",
+  link: "https://www.hamhelsinki.fi/nayttelyt",
+  description: [
+    "The Second Shift* tarkoittaa kotitöiden ja lastenhoidon huomaamatonta työtaakkaa. Se on fyysistä ja henkistä työtä, joka vaatii vaivannäköä, taitoa ja aikaa. Siitä ei kuitenkaan makseta palkkaa eikä anneta tunnustusta. Se myös jakautuu epätasa-arvoisesti eikä useinkaan saa minkäänlaista huomiota.",
+    "Jari Silomäen (s. 1975) Tunteiden maantiede tallentaa 2000-luvun tapahtumia: kehittyvien maiden nopeaa vaurastumista ja eriarvoistumista, internetin servereiden pyörittämää yhteistä kotimaata, oman henkilöhistorian julkista esittämistä ja intimiteettisuojaa sekä eurooppalaisen poliittisen populismin vaikutusta yksilön elämään.",
+    "Teoksessaan Sensitometrinen koe Polaroidilla taiteilija Minna L. Henriksson (s. 1976) kysyy, voiko kamera olla rasistinen. Monet valokuvauslaitteet ja värifilmit on suunniteltu ensisijaisesti vaaleaihoisten ihmisten kuvaamiseen, ja Polaroid-kameroilla oli roolinsa Etelä-Afrikan apartheid-hallinnon rotupolitiikassa 1970-luvulla. Kun taiteilijalle tarjoutui mahdollisuus käyttää suurikokoista Polaroid-kameraa ja uutta filmiä, hän testasi niiden rajoitteita yhdessä tummaihoisen mallin kanssa."
   ],
   museocard: true
 }]
