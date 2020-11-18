@@ -12,8 +12,8 @@ export const MapContainer = styled.div`
 `;
 
 export const ClusterMarker = styled.div`
-  color: #fff;
-  background: #363636;
+  color: #b600ff;
+  background: #fff;
   border-radius: 50%;
   padding: 10px;
   display: flex;

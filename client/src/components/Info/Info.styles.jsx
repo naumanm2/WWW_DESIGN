@@ -21,13 +21,14 @@ export const InfoContainer = styled(Container)`
 `;
 
 export const InfoSection = styled.div`
-  color: #fff;
   position: relative;
   left: -230px;
   top: -360px;
   background-color: #fff;
+  color: #363636;
   transition: all 0.2s linear;
   z-index: 100;
+  width: 600px;
 
   @media screen and (max-width: 991px) {
     width: 100%;
@@ -68,29 +69,26 @@ padding-left: 15px;
 `
 
 export const TextWrapper = styled.div`
-max-width: 540px;
-padding-top: 0;
-padding-bottom: 60px;
+  max-width: 540px;
+  padding-top: 0;
+  padding-bottom: 60px;
 
-@media screen and (max-width: 991px)
-padding-bottom: 65px;
+  @media screen and (max-width: 991px)
+  padding-bottom: 65px;
 
-`
+  `
 
 export const TopLine = styled.div`
-  color: ${({ light}) => (light ? '#fff' : '#363636')};
   font-size: 12px;
   font-weight: bold;
-  line-height: 16px;
-  letter-spacing: 1.4px;
 
 `
 
 export const InfoText = styled.p`
   width: 100%;
   max-width: 440px;
-  font-size: 12px;
-  color: ${({ light}) => (light ? '#fff' : '#363636')};
+  font-size: 11px;
+  color: #363636;
 `
 export const ImageText = styled.p`
   width: 100%;
@@ -162,6 +160,4 @@ export const Museocard = styled.p`
 export const OpeningHours = styled.p`
 `
 export const Clock = styled.p`
-`
-export const Site = styled.p`
 `

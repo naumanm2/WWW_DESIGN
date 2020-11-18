@@ -79,7 +79,6 @@ const Map = (props) => {
        return {
          panControl: false,
          mapTypeControl: false,
-         scrollwheel: false,
          styles: mapStyle,
        }
      }
@@ -97,9 +96,6 @@ const Map = (props) => {
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map, maps }) => {
           mapRef.current = map
-          console.log(map)
-          mapRef.current.styles = mapStyle
-          console.log(map.styles)
         }}
         onChange={({ zoom, bounds }) => {
           setZoom(zoom)

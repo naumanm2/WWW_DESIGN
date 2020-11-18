@@ -21,7 +21,7 @@ export const PinContainer = styled(Container)`
 
 
 export const PinStyle = styled.div`
-  color: #363636;
+  color: #fff;
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
@@ -46,7 +46,7 @@ export const PinObject = styled(Location)`
   position: absolute;
   width: ${({onTop}) => onTop ? '40px' : '30px'};
   height: ${({onTop}) => onTop ? '40px' : '30px'};
-  color: ${({onTop}) => onTop ? '#fff' : '#363636'};
+  color: ${({onTop}) => onTop ? '#b600ff' : '#fff'};
   left: ${({onTop}) => onTop ? '-5px' : '0px'};
   margin: 0;
 

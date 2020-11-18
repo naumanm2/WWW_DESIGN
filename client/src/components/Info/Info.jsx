@@ -53,13 +53,17 @@ const Info = (props) => {
     setSlide((slide+1)%props.info.description.length)
   }
 
+  const mcard = () => {
+   return props.info.museocard ? 'museokortilla ilmaiseksi!' : ''
+  }
+
 
   if (!props.info || !props.show || props.show !== props.info.museumName) {
     return null
   }
   return (
     <ClickAwayListener onClickAway={handleClick}>
-      <Grow in={props.show}>
+      <Grow in={props.show===props.info.museumName}>
       <InfoSection>
         <InfoContainer>
           <InfoRow>
@@ -110,11 +114,9 @@ const Info = (props) => {
                   {fee}
                 </InfoText>
               ))}
-              <InfoText>
-                <Museocard>
-                  museokortti
-                </Museocard>
-              </InfoText>
+              <TopLine>
+                {mcard()}
+              </TopLine>
             </InfoColumn>
             <InfoColumn>
               <TopLine>
@@ -138,9 +140,7 @@ const Info = (props) => {
                 </InfoText>
               ))}
               <InfoText>
-                <Site>
                   <a href={`${props.info.link}`}>{props.info.link}</a>
-                </Site>
             </InfoText>
             </InfoColumn>
           </InfoRow>
