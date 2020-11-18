@@ -47,7 +47,8 @@ const Info = (props) => {
   }
   const handleLeftClick = (event) => {
     event.preventDefault()
-    setSlide((slide-1)%props.info.description.length)
+    setSlide(Math.abs((slide-1)%props.info.description.length))
+    console.log(slide)
   }
   const handleRightClick = (event) => {
     event.preventDefault()
