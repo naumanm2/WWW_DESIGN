@@ -27,7 +27,7 @@ export const InfoSection = styled.div`
   top: -360px;
   background-color: #fff;
   transition: all 0.2s linear;
-  z-index: 10;
+  z-index: 100;
 
   @media screen and (max-width: 991px) {
     width: 100%;
@@ -93,7 +93,7 @@ export const InfoText = styled.p`
 `
 
 export const ImgWrapper = styled.div`
-  width: 50%;
+  width: 30%;
   background-color: #363636;
   display: flex;
   justify-content: flex-start;
@@ -105,7 +105,7 @@ export const Img = styled.img`
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
-  max-height: 130px;
+  max-height: 100px;
 
 `
 
@@ -120,8 +120,8 @@ export const CloseBtn = styled(Close)`
 
 export const LeftArrow = styled(LeftArrowAlt)`
   color: #363636;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   &:hover {
     color: #fff;
@@ -129,8 +129,8 @@ export const LeftArrow = styled(LeftArrowAlt)`
 `
 export const RightArrow = styled(RightArrowAlt)`
   color: #363636;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   &:hover {
     color: #fff;

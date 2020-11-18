@@ -88,8 +88,9 @@ const Map = (props) => {
         onChildMouseEnter={onChildMouseEnter}
         onChildMouseLeave={onChildMouseLeave}
         yesIWantToUseGoogleMapApiInternals
-        onGoogleApiLoaded={({ map }) => {
+        onGoogleApiLoaded={({ map, maps }) => {
           mapRef.current = map
+          console.log(maps)
         }}
         onChange={({ zoom, bounds }) => {
           setZoom(zoom)
@@ -106,6 +107,7 @@ const Map = (props) => {
           const {cluster: isCluster, point_count: pointCount} = cluster.properties
 
           if (isCluster) {
+            console.log(mapRef.current)
             return (
               <Marker
                 key={`cluster-${cluster.id}`}

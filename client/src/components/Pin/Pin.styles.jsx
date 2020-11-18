@@ -15,6 +15,7 @@ export const PinContainer = styled(Container)`
   cursor: pointer;
   padding: 0;
   color: #fff;
+  z-index: 99;
   ${Container}
 `;
 
@@ -53,5 +54,6 @@ export const PinObject = styled(Location)`
 `;
 
 export const GalleryContainer = styled.div`
+  z-index: 99;
 
 `
