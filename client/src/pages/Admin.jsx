@@ -1,6 +1,5 @@
 import React from 'react'
 
-import NewPin from '../components/NewPin/NewPin'
 import Login from '../components/Login/Login'
 import Logout from '../components/Logout/Logout'
 
@@ -30,7 +29,6 @@ const Admin = (props) => {
     <>
       <Navbar />
       <Drawer />
-      <NewPin />
       <Logout />
     </>
   )
