@@ -66,6 +66,7 @@ export const TopLine = styled.div`
 export const InfoText = styled.p`
   width: 100%;
   max-width: 440px;
+  font-size: 12px;
 `
 export const ImageText = styled.p`
   width: 100%;

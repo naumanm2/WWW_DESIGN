@@ -134,6 +134,9 @@ const museums = [{
   exhibitionDuration: [
     "25-12-2012-"
   ],
+  exhibitionName: [
+    "Egyptin loisto"
+  ],
   openingHours: [
     "ma: 11-18",
     "ti: suljettu",
@@ -156,7 +159,7 @@ const museums = [{
   picture: "https://upload.wikimedia.org/wikipedia/commons/d/d1/Amos_Rex_aukio.jpg",
   attribution: "Kuva: Kulttuurinavigaattori - Oma teos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=72197979",
   link: "https://amosrex.fi/nayttelyt/",
-  description: "Suuri muinaisen Egyptin näyttely vie sinut aikamatkalle tuhansien vuosien taa faraoiden Egyptiin. Näyttely on samanaikaisesti kahdessa paikassa: Helsingin Amos Rexissä sekä Tallinnan Kumu-taidemuseossa. Harvinainen kaksiosainen näyttely pohjautuu Italiassa toimivan Museo Egizion kokoelmaan, joka on suurin muinaisen Egyptin taiteen ja kulttuurin kokoelma Egyptin ulkopuolella.",
+  description: "Suuri muinaisen Egyptin näyttely vie sinut aikamatkalle tuhansien vuosien taa faraoiden Egyptiin. Näyttely on samanaikaisesti kahdessa paikassa: Helsingin Amos Rexissä sekä Tallinnan Kumu-taidemuseossa.",
   museocard: true
 },
 {
@@ -275,7 +278,7 @@ const museums = [{
   link: "https://sinebrychoffintaidemuseo.fi/nayttelyt/",
   description: [
     "Venetsialaisen mestarin Giovanni Battista Tiepolon (1696–1770) kuolemasta tulee kuluneeksi 250 vuotta. Maineikkaan taiteilijan työhuone vastaanotti tilauksia venetsialaisilta aatelisperheiltä ja ulkomaisilta hoveilta. Näyttely kertoo, kuinka Tiepolon taide kulkeutui Italiasta Englantiin ja Pohjois-Eurooppaan aina Venäjälle asti. Esille tulee 23 maalausta ja luonnosta sekä laaja valikoima piirroksia.",
-    "Taidekokoelmat kertovat tarinoita paitsi taiteesta myös aikakauden ihanteista. Parhaimmillaan kokoelman tarkastelu vie lähelle keräilijää. Voi aavistella tämän haaveita, tunteita, toiveita ja odotuksia. Voi päästä mukaan matkoille Euroopan kaupunkivilinään tai idyllisiin maisemiin – yllätyksellisten tai hartaasti suunniteltujen hankintojen äärelle. Esillä on aarteita muun muassa Otto Wilhelm Klinckowströmin, Hjalmar Linderin, Herman Antellin sekä Ester ja Jalo Sihtolan kokoelmista."
+    "Taidekokoelmat kertovat tarinoita paitsi taiteesta myös aikakauden ihanteista. Parhaimmillaan kokoelman tarkastelu vie lähelle keräilijää. Voi aavistella tämän haaveita, tunteita, toiveita ja odotuksia. Voi päästä mukaan matkoille Euroopan kaupunkivilinään tai idyllisiin maisemiin – yllätyksellisten tai hartaasti suunniteltujen hankintojen äärelle. "
   ],
   museocard: true
 },
@@ -403,7 +406,7 @@ const museums = [{
   description: [
     "The Second Shift* tarkoittaa kotitöiden ja lastenhoidon huomaamatonta työtaakkaa. Se on fyysistä ja henkistä työtä, joka vaatii vaivannäköä, taitoa ja aikaa. Siitä ei kuitenkaan makseta palkkaa eikä anneta tunnustusta. Se myös jakautuu epätasa-arvoisesti eikä useinkaan saa minkäänlaista huomiota.",
     "Jari Silomäen (s. 1975) Tunteiden maantiede tallentaa 2000-luvun tapahtumia: kehittyvien maiden nopeaa vaurastumista ja eriarvoistumista, internetin servereiden pyörittämää yhteistä kotimaata, oman henkilöhistorian julkista esittämistä ja intimiteettisuojaa sekä eurooppalaisen poliittisen populismin vaikutusta yksilön elämään.",
-    "Teoksessaan Sensitometrinen koe Polaroidilla taiteilija Minna L. Henriksson (s. 1976) kysyy, voiko kamera olla rasistinen. Monet valokuvauslaitteet ja värifilmit on suunniteltu ensisijaisesti vaaleaihoisten ihmisten kuvaamiseen, ja Polaroid-kameroilla oli roolinsa Etelä-Afrikan apartheid-hallinnon rotupolitiikassa 1970-luvulla. Kun taiteilijalle tarjoutui mahdollisuus käyttää suurikokoista Polaroid-kameraa ja uutta filmiä, hän testasi niiden rajoitteita yhdessä tummaihoisen mallin kanssa."
+    "Teoksessaan Sensitometrinen koe Polaroidilla taiteilija Minna L. Henriksson (s. 1976) kysyy, voiko kamera olla rasistinen. Monet valokuvauslaitteet ja värifilmit on suunniteltu ensisijaisesti vaaleaihoisten ihmisten kuvaamiseen, ja Polaroid-kameroilla oli roolinsa Etelä-Afrikan apartheid-hallinnon rotupolitiikassa 1970-luvulla."
   ],
   museocard: true
 }]
