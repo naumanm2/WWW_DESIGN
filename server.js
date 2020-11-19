@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(routes)
 
 if (config.NODE_ENV === 'production') {
-  app.use(express.static('cliend/build'))
+  app.use(express.static('client/build'))
 }
 
 
