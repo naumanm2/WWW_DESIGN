@@ -53,7 +53,6 @@ export const InfoColumn = styled.div`
   flex-flow: column nowrap;
   padding-right: 15px;
   padding-left: 15px;
-  overflow-y: scroll;
 
 `
 
