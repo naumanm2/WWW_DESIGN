@@ -87,12 +87,12 @@ export const TopLine = styled.div`
 export const InfoText = styled.p`
   width: 100%;
   max-width: 440px;
-  font-size: 11px;
+  font-size: 12px;
 `
 export const ImageText = styled.p`
   width: 100%;
   max-width: 120px;
-  font-size: 6px;
+  font-size: 7px;
 `
 
 export const ImgWrapper = styled.div`
