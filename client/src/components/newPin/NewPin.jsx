@@ -4,6 +4,13 @@ import {connect} from 'react-redux'
 
 import {createPin} from '../../reducers/pinReducer'
 
+/*--
+Component to add pins to database. Does work, but our focus is not on this.
+Therefore this is very rough implementation of adding a pin. Has state of a user
+that could be used to check whether user is logged in. We did not implement this
+as we did not see this component as something to put too much focus in.
+ --*/
+
 const NewPin = (props) => {
 
   const [type, setType] = useState('')
