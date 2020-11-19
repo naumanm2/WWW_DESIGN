@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 
 import Home from './pages/Home'
 import Admin from './pages/Admin'
+import About from './pages/About'
 
 import GlobalStyle from './styles'
 
@@ -26,6 +27,9 @@ const App = (props) => {
         </Switch>
         <Switch>
           <Route path='/admin' exact component={Admin} />
+        </Switch>
+        <Switch>
+          <Route path='/about' exact component={About} />
         </Switch>
     </div>
   )

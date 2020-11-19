@@ -6,8 +6,6 @@ export const MapContainer = styled.div`
   top: 0;
   width: 100%;
   height: 100vh;
-
-
 `;
 
 export const ClusterMarker = styled.div`

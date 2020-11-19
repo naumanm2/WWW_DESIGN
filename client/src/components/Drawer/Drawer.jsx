@@ -6,6 +6,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import InfoIcon from '@material-ui/icons/Info';
 
 import { connect } from 'react-redux'
 
@@ -42,6 +43,10 @@ const TemporaryDrawer = ({state, toggleDrawer}) => {
         <ListItem button component={Link} to='/admin'>
           <ListItemIcon> <VpnKeyIcon /> </ListItemIcon>
           <ListItemText primary="Add museum" />
+        </ListItem>
+        <ListItem button component={Link} to='/about'>
+          <ListItemIcon> <InfoIcon /> </ListItemIcon>
+          <ListItemText primary="About us" />
         </ListItem>
       </List>
     </div>

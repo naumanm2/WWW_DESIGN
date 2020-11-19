@@ -13,6 +13,8 @@ import { useStyles } from './NavBar.styles'
 
 import { connect } from 'react-redux'
 
+import { Link } from 'react-router-dom'
+
 import { toggleDrawer } from '../../reducers/menuReducer'
 import { setFilter } from '../../reducers/filterReducer'
 
@@ -36,7 +38,7 @@ const SearchAppBar = (props) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" style={{background: '#363636'}}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -48,7 +50,9 @@ const SearchAppBar = (props) => {
           <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            <img src={logo} alt="taidegalleriat" width="200"/>
+            <Link to='/'>
+              <img src={logo} alt="taidegalleriat" width="200"/>
+            </Link>
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
