@@ -1,3 +1,6 @@
+//Sets initial pins. Fetches data from mongoose. Creates pins and updates state.
+//Creating a pin also updates database accordinly.
+
 import pinService from '../services/pins'
 
 export const initData = () => {

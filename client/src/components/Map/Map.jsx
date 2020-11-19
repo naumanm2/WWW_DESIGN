@@ -9,24 +9,31 @@ import { connect } from 'react-redux'
 
 const Marker = ({ children }) => children
 
+/*--
+The actual "beef" of our application. Map component using npm library google-map-react.
+Uses clusters when needed and pans map accordingly when clicked on one.
+Filters pins according to user input. Filter gets input from redux store.
+
+ --*/
+
 
 
 const Map = (props) => {
 
-
   const mapRef = useRef()
 
+  //function to filter pins. Does not filter if filter is not set. Gets information from redux store.
   const filteredPins = props.pins.filter(x =>
     !props.filter || (x.museumName.toLowerCase().indexOf(props.filter.toLowerCase()) !== -1)
   )
 
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(10)
+
   const points = filteredPins.map(pin => ({
     type: "Feature",
     properties: {
       cluster: false, ...pin
-
     },
     geometry: { type: "Point", coordinates: [
         pin.lng.$numberDecimal,
@@ -35,6 +42,7 @@ const Map = (props) => {
     }
   }))
 
+  //supercluster library
   const { clusters, supercluster } = useSupercluster({
     points,
     bounds,
@@ -42,6 +50,7 @@ const Map = (props) => {
     options: { radius: 75, maxZoom: 20 }
   });
 
+  //set keys when hovered on a pin to display adjacent data in the pin component
   const [show, setShow] = useState('')
 
   const onChildMouseEnter = (key, childProps) => {
@@ -52,7 +61,7 @@ const Map = (props) => {
      setShow('')
    }
 
-
+   //styling to map
    const createMapOptions = (maps) => {
        return {
          panControl: false,
@@ -63,7 +72,6 @@ const Map = (props) => {
 
   return (
     <MapContainer>
-
       <GoogleMap
         bootstrapURLKeys={{ key: process.env.REACT_APP_API_KEY }}
         defaultCenter={props.center}
@@ -88,7 +96,6 @@ const Map = (props) => {
         {clusters.map(cluster => {
           const [longitude, latitude] = cluster.geometry.coordinates
           const {cluster: isCluster, point_count: pointCount} = cluster.properties
-
           if (isCluster) {
             return (
               <Marker
@@ -117,17 +124,17 @@ const Map = (props) => {
             )
           }
           return (
-              <Pin
-                key={`pin-${cluster.properties._id}`}
-                lat={latitude}
-                lng={longitude}
-                input={cluster.properties}
-                show={show===`pin-${cluster.properties._id}`}>
-              </Pin>
+            <Pin
+              key={`pin-${cluster.properties._id}`}
+              lat={latitude}
+              lng={longitude}
+              input={cluster.properties}
+              show={show===`pin-${cluster.properties._id}`}>
+            </Pin>
           )
         })}
       </GoogleMap>
-  </MapContainer>
+    </MapContainer>
   )
 }
 

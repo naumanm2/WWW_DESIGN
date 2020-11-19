@@ -32,16 +32,16 @@ const Pin = (props) => {
     <>
     <GalleryContainer>
       <Slide direction="down" in={true} mountOnEnter unmountOnExit style={{ transitionDelay: true ? '500ms' : '0ms' }}>
-      <PinContainer>
-      <PinStyle >
-          <PinStyleHover onTop={props.show} >
-            {props.input.museumName}
-          </PinStyleHover>
-          <PinObject onTop={props.show} onClick={setInfo}>
-          </PinObject>
-      </PinStyle>
-    </PinContainer>
-  </Slide>
+        <PinContainer>
+          <PinStyle >
+            <PinStyleHover onTop={props.show} >
+              {props.input.museumName}
+            </PinStyleHover>
+            <PinObject onTop={props.show} onClick={setInfo}>
+            </PinObject>
+          </PinStyle>
+        </PinContainer>
+      </Slide>
     <Info show={props.input.museumName} />
 </GalleryContainer>
 

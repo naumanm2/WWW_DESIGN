@@ -1,3 +1,5 @@
+//manages sidebars state, whether it is open or close.
+
 export const toggleDrawer = (data) => {
   return async dispatch => {
     dispatch({

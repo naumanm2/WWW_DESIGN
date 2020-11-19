@@ -1,3 +1,5 @@
+//redux store filtering pins. Filters only by museums name 
+
 export const setFilter = (data) => {
   return async dispatch => {
     dispatch({

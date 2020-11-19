@@ -15,6 +15,8 @@ import { Link } from 'react-router-dom'
 
 const TemporaryDrawer = ({state, toggleDrawer}) => {
 
+  // helper function to close drawer
+
   const handleClick = (event) => {
     event.preventDefault()
     try {
@@ -23,6 +25,7 @@ const TemporaryDrawer = ({state, toggleDrawer}) => {
       console.log(e)
     }
   }
+
 
 
   const list = (anchor) => (

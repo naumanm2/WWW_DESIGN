@@ -16,7 +16,11 @@ import { connect } from 'react-redux'
 import { toggleDrawer } from '../../reducers/menuReducer'
 import { setFilter } from '../../reducers/filterReducer'
 
+/*--
+Navigation bar imported from material ui. Uses pre-set styles from material UI library.
+Input-field dictates information in redux store about filtering of pins
 
+ --*/
 const SearchAppBar = (props) => {
 
   const classes = useStyles();
@@ -67,6 +71,8 @@ const SearchAppBar = (props) => {
   );
 }
 
+
+//wont render without this even though this state is not used.
 const mapStateToProps = (state) => {
   return {
     open: state.menu

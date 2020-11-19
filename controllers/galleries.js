@@ -1,3 +1,7 @@
+/*--
+For fetching and updating information from database. We wont actually use else than
+getAll and create.
+ --*/
 const Pin = require('../models/pin')
 
 module.exports = {

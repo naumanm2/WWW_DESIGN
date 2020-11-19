@@ -1,3 +1,6 @@
+//State management to set user. Fetches and stores information from localstorage.
+//Nullifying an user also nullifies localstorage.
+
 export const initUser = () => {
     return async dispatch => {
       const data = window.localStorage.getItem('loggedAppUser')

@@ -1,3 +1,5 @@
+//backend server to mongoose. logs errors to console.
+
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -21,11 +23,9 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 app.use(express.json())
 app.use(routes)
 
-const init = async () => {
-  await Pin.deleteMany({})
-  await Pin.insertMany(initData.museums)
+if (config.NODE_ENV === 'production') {
+  app.use(express.static('cliend/build'))
 }
-init()
 
 
 app.use(middleware.requestLogger)

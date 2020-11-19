@@ -10,7 +10,6 @@ import { connect } from 'react-redux'
 import { Switch, Route } from 'react-router-dom'
 
 import { initData } from './reducers/pinReducer'
-import { initUser } from './reducers/userReducer'
 
 
 const App = (props) => {
@@ -21,13 +20,13 @@ const App = (props) => {
 
   return (
     <div>
-    <GlobalStyle open={props.isOpen} />
+      <GlobalStyle open={props.isOpen} />
         <Switch>
           <Route path='/' exact component={Home} />
-      </Switch>
-      <Switch>
-        <Route path='/admin' exact component={Admin} />
-      </Switch>
+        </Switch>
+        <Switch>
+          <Route path='/admin' exact component={Admin} />
+        </Switch>
     </div>
   )
 }
@@ -44,8 +43,7 @@ const mapStateToProps = (state) => {
 
 
 const mapDispatchToProps = {
-  initData,
-  initUser
+  initData
 }
 
 export default connect(

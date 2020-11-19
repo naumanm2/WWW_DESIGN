@@ -1,3 +1,5 @@
+//manages content thats displayed on an information window of a pin.
+
 export const setInfo = (data) => {
   return async dispatch => {
     dispatch({

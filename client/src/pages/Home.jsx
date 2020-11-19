@@ -3,6 +3,10 @@ import Map from '../components/Map/Map'
 import Navbar from '../components/NavBar/Navbar'
 import Drawer from '../components/Drawer/Drawer'
 
+
+/*--
+Main page holding components. Sets map to center around Helsinki.
+ --*/
 const Home = (props) => {
   const helsinki = {
     lat: 60.1733244,
@@ -16,8 +20,8 @@ const Home = (props) => {
         center={helsinki}
         zoom={11}
       />
-    <Navbar />
-    <Drawer />
+      <Navbar />
+      <Drawer />
     </div>
   )
 }

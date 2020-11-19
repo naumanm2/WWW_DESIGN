@@ -4,6 +4,14 @@ import { connect } from 'react-redux'
 
 import { setUser } from '../../reducers/userReducer'
 
+/*--
+
+Component allows hyphotethical user to login. No validation of credentials
+has been implemented since we did not consider this relevant to our application.
+
+Gets information from redux store containing current user. Can also set new user.
+ --*/
+
 const Login = (props) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -16,6 +24,7 @@ const Login = (props) => {
       console.log(e)
     }
   }
+  
   return (
     <div>
       <form onSubmit = {handleLogin}>

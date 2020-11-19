@@ -4,6 +4,12 @@ import { connect } from 'react-redux'
 
 import { nullUser } from '../../reducers/userReducer'
 
+/*--
+Component to log out user and update redux store with no user set.
+Returns nothing if user is not logged in.
+
+ --*/
+
 const Logout = (props) => {
 
   const logout = (event) => {
@@ -23,8 +29,6 @@ const Logout = (props) => {
     return (
       <div />
     )
-
-
 }
 
 const mapStateToProps = (state) => {

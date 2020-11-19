@@ -1,3 +1,5 @@
+//used to log error information to console.
+
 const logger = require('./logger')
 
 const requestLogger = (request, response, next) => {

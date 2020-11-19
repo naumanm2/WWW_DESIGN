@@ -11,24 +11,27 @@ import Drawer from '../components/Drawer/Drawer'
 
 
 import { connect } from 'react-redux'
-
+/*--
+Admin page that we did not implement further as we did not see this
+holding very much value to our application.
+ --*/
 
 const Admin = (props) => {
   if (!props.user) {
     return (
       <>
-      <Navbar />
-      <Drawer />
-      <Login />
+        <Navbar />
+        <Drawer />
+        <Login />
       </>
     )
   }
   return (
     <>
-    <Navbar />
-    <Drawer />
-    <NewPin />
-    <Logout />
+      <Navbar />
+      <Drawer />
+      <NewPin />
+      <Logout />
     </>
   )
 }

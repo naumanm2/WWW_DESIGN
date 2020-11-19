@@ -1,3 +1,5 @@
+//For fetching information from backend
+
 import axios from 'axios'
 const baseUrl = '/api/pins'
 

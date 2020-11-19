@@ -1,3 +1,5 @@
+//set global styles for application
+
 import styled, {createGlobalStyle} from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`

@@ -1,3 +1,5 @@
+//model required for mongoose. Contains values and types for museum objects and its fields.
+
 const mongoose = require('mongoose')
 
 const schema = new mongoose.Schema({
