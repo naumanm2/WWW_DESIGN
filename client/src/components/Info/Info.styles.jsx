@@ -33,7 +33,6 @@ export const InfoSection = styled.div`
 
   @media screen and (max-width: 991px) {
     width: 100%;
-    font-size: 9px;
   }
 
 `;
@@ -54,11 +53,23 @@ export const InfoColumn = styled.div`
   padding-right: 15px;
   padding-left: 15px;
 
+  @media screen and (max-width: 991px) {
+    width: 100%;
+    overflow-y: scroll;
+    padding-right: 5px;
+    padding-left: 5px;
+
+  }
+
 `
 
 export const TopLine = styled.div`
   font-size: 12px;
   font-weight: bold;
+
+  @media screen and (max-width: 991px) {
+    font-size: 10px;
+  }
 
 `
 
@@ -66,6 +77,10 @@ export const InfoText = styled.p`
   width: 100%;
   max-width: 440px;
   font-size: 12px;
+
+  @media screen and (max-width: 991px) {
+    font-size: 9px;
+  }
 `
 export const ImageText = styled.p`
   width: 100%;
@@ -107,6 +122,10 @@ export const LeftArrow = styled(LeftArrowAlt)`
   top: 120px;
   &:hover {
     color: #b600ff;
+  }
+
+  @media screen and (max-width: 991px) {
+    top: 100px;
   }
 `
 export const RightArrow = styled(RightArrowAlt)`
