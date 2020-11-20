@@ -25,13 +25,9 @@ const App = (props) => {
     <div>
       <GlobalStyle open={props.isOpen} />
         <Switch>
-          <Route path='/' exact component={Home} />
-        </Switch>
-        <Switch>
           <Route path='/admin' exact component={Admin} />
-        </Switch>
-        <Switch>
           <Route path='/about' exact component={About} />
+          <Route path='/' exact component={Home} />
         </Switch>
     </div>
   )
