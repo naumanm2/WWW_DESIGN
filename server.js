@@ -23,6 +23,15 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology
 app.use(express.json())
 app.use(routes)
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname, './client/public/index.html'), function(err) {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
+
 if (config.NODE_ENV === 'production') {
   app.use(express.static('client/build'))
 }
