@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 
-import { AboutContainer, AboutSection, TopLine, InfoText } from './AboutUs.styles'
+import { AboutContainer, AboutSection, TopLine, InfoText, HomeLink } from './AboutUs.styles'
 
 import logo1 from './a1.png'
 import logo2 from './a2.png'
@@ -67,7 +67,11 @@ const AboutUs = (props) => {
           <InfoText>
             This service was created by two students from Aalto University in Finland.
           </InfoText>
+          <TopLine>
+            Start exploring art <HomeLink href='/'>here!</HomeLink>
+          </TopLine>
           {image}
+
 
 
 

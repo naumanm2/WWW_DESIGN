@@ -49,3 +49,10 @@ export const InfoText = styled.p`
   paddding-top: 20px;
   padding-bottom: 20px;
 `
+
+export const HomeLink = styled.a`
+  color: #fff;
+  &:hover {
+    color: #5c5c5c;
+  }
+`

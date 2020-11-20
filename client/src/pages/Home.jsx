@@ -20,7 +20,7 @@ const Home = (props) => {
         center={helsinki}
         zoom={11}
       />
-    <Navbar home={true}/>
+    <Navbar home={true} redirect='/about'/>
       <Drawer />
     </div>
   )

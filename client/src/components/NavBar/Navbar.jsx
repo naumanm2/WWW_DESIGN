@@ -25,6 +25,8 @@ Input-field dictates information in redux store about filtering of pins
  --*/
 const SearchAppBar = (props) => {
 
+
+
   const classes = useStyles();
 
   const handleClick = (event) => {
@@ -63,6 +65,7 @@ const search = () => {
 }
 
 
+
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{background: '#363636'}}>
@@ -77,7 +80,7 @@ const search = () => {
           <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            <Link to='/about'>
+            <Link to={`${props.redirect}`}>
               <img src={logo} alt="taidegalleriat" width="200"/>
             </Link>
           </Typography>

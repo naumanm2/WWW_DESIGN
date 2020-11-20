@@ -8,7 +8,7 @@ const About = (props) => {
   return (
     <div>
       <AboutUs />
-      <Navbar />
+      <Navbar redirect='/'/>
       <Drawer />
     </div>
   )
