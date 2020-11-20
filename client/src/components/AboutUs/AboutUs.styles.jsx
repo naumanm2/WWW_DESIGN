@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import { Container } from '../../styles'
 
+import { Link } from 'react-router-dom'
+
 export const AboutContainer = styled(Container)`
   display: flex;
   position: absolute;
@@ -50,7 +52,7 @@ export const InfoText = styled.p`
   padding-bottom: 20px;
 `
 
-export const HomeLink = styled.a`
+export const HomeLink = styled(Link)`
   color: #fff;
   &:hover {
     color: #5c5c5c;

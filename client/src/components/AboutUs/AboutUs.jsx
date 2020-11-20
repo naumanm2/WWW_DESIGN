@@ -68,7 +68,7 @@ const AboutUs = (props) => {
             This service was created by two students from Aalto University in Finland.
           </InfoText>
           <TopLine>
-            Start exploring art <HomeLink href='/'>here!</HomeLink>
+            Start exploring art <HomeLink to='/'>here!</HomeLink>
           </TopLine>
           {image}
 
