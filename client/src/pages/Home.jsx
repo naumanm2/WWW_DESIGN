@@ -20,7 +20,7 @@ const Home = (props) => {
         center={helsinki}
         zoom={11}
       />
-      <Navbar />
+    <Navbar home={true}/>
       <Drawer />
     </div>
   )

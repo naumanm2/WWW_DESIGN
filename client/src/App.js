@@ -15,9 +15,11 @@ import { initData } from './reducers/pinReducer'
 
 const App = (props) => {
 
+
   useEffect(() => {
     props.initData()
   }, [])
+
 
   return (
     <div>

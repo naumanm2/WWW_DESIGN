@@ -36,6 +36,33 @@ const SearchAppBar = (props) => {
     }
   }
 
+//conditionally renders filter input only if on the map page
+const search = () => {
+  if (props.home) {
+    return (
+  <div className={classes.search}>
+    <div className={classes.searchIcon}>
+      <SearchIcon />
+    </div>
+    <InputBase
+      placeholder="Filter…"
+      classes={{
+        root: classes.inputRoot,
+        input: classes.inputInput,
+      }}
+
+      inputProps={{ 'aria-label': 'search' }}
+      onChange={({target}) => props.setFilter(target.value)}
+    />
+  </div>
+  )
+} else {
+  return null
+}
+
+}
+
+
   return (
     <div className={classes.root}>
       <AppBar position="static" style={{background: '#363636'}}>
@@ -54,25 +81,11 @@ const SearchAppBar = (props) => {
               <img src={logo} alt="taidegalleriat" width="200"/>
             </Link>
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Filter…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-
-              inputProps={{ 'aria-label': 'search' }}
-              onChange={({target}) => props.setFilter(target.value)}
-            />
-          </div>
+          {search()}
         </Toolbar>
       </AppBar>
     </div>
-  );
+)
 }
 
 
