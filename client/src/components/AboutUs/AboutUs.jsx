@@ -43,7 +43,7 @@ const AboutUs = (props) => {
   useInterval(() => {
     setSlide((slide+1)%3)
     setImage(images[slide])
-  }, 3000)
+  }, 2500)
 
 
 

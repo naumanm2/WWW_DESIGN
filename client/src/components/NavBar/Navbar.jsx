@@ -77,7 +77,7 @@ const search = () => {
           <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            <Link to='/'>
+            <Link to='/about'>
               <img src={logo} alt="taidegalleriat" width="200"/>
             </Link>
           </Typography>
